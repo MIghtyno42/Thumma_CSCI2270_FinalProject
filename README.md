@@ -6,8 +6,8 @@ This program works as an inventory for fashion companies and retail stores. What
 How to Run:
 
 Dependencies:
--	String library
--	
+String library
+
 
 System Requirements:
 This program can be run on Windows, Mac, and Linux operating systems. 
