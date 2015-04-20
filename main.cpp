@@ -1,6 +1,6 @@
 // Deekshitha Thumma
 // Hoenigman 2270
-// FInal Project
+// Final Project
 // April 20th
 // Partner: Christine Samson
 
@@ -13,8 +13,42 @@
 
 using namespace std;
 
-int main()
+int main(int argc, char *argv[])
 {
+	int command;
+	
+    while(command != 5)
+    {
+        cout<<"======Main Menu======"<<endl;
+        cout<<"1. "<<endl;
+        cout<<"2. "<<endl;
+        cout<<"3. "<<endl;
+        cout<<"4. "<<endl;
+        cout<<"5. "<<endl;
+
+        cin >> command;
+        cin.ignore(10000,'\n');
+
+        switch(input)
+        {
+			
+        case 1:
+            break;
+        case 2:
+            break;
+        case 3:
+
+            break;
+        case 4:;
+            break;
+        case 5:
+            cout<<"Goodbye!"<<endl;
+            break;
+        default:
+            cout<<"Not a valid menu selection"<<endl;
+            break;
+        }
+    }
 
 }
 
