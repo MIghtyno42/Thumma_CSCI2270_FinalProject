@@ -1,0 +1,30 @@
+1,Cropped Halter Top,shirt,white,retro
+2,Crochet Paneled Flounce Dress,dress,white,boho
+3,Longline Side Slit Shirt,shirt,black,modern
+4,Paisley Print Babydoll Dress,dress,blue,boho
+5,Varsity Striped Crop Top,shirt,red,basic
+6,Tribal Print Baby Doll Top,shirt,blue,boho
+7,Ornate Chrochet Boxy Top,shirt,cream,boho
+8,Stretch Knit Trapeze Dress,dress,cream,basic
+9,Crochet Trimmed Woven Blouse,shirt,pink,classy
+10,Tribal Print Ankle Slit Pants,pants,blue,boho
+11,Classic Crease Front Trousers,pants,cream,classy
+12,Skinny Sailor Pants,pants,blue,basic
+13,Satin Joggers,pants,grey,basic
+14,Wide Leg SLit PLeat Pants,pants,blue,boho
+15,Heathered Flared Pants,pants,red,modern
+16,Floral Elephant Print Palazzo Pants,pants,yeloow,boho
+17,Ruched Tulip Front Mini Skirt,skirt,black,classy
+18,Classic A Line Skirt,skirt,purple,classy
+19,Woven Drawstring Skirt,skirt,blue,boho
+20,Ribbed Striped Midi Skirt,skirt,orange,retro
+21,Buttoned Denim Pencil Skirt,skirt,blue,modern
+22,Butterfly Print Scuba Print Skirt,skirt,red,boho
+23,Box Pleated Gingham Skirt,skirt,white,classy
+24,Floral Drop Waist SKirt,skirt,purple,retro
+25,Abstract Striped Bodycon Skirt,skirt,black,classy
+26,Strappy Mid Calf Gladiator Sandals,shoe,black,boho
+27,Metallic Faux Leather Slingback Sandals,shoe,pink,classy
+28,Lace Up Wedge Ankle Booties,shoe,black,classy
+29,Floral Lace Ballet Flats,shoe,black,classy
+30,Embroidered Espadrilles,shoe,cream,retro
