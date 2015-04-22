@@ -13,6 +13,7 @@
 
 struct item{
 	int number;
+	string name;
 	string type;
 	string color;
 	string style;
