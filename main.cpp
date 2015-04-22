@@ -50,3 +50,61 @@ int main(int argc, char *argv[])
     return 0;
 }
 
+string convert(string string1){
+    int lng = string1.length();
+    int match = string1.length();
+    int index = 0;
+    
+    
+    for (int x = 0; x< string1.length(); x++){                         //if the character is a symbol
+        if (string1[x] == ' ' ||string1[x] == '!' ||string1[x] == '@' 
+            ||string1[x] == '#' ||string1[x] == '$' ||string1[x] == '%' 
+            ||string1[x] == '^' ||string1[x] == '&' ||string1[x] == '*' 
+            ||string1[x] == '(' ||string1[x] == ')' ||string1[x] == '-' 
+            ||string1[x] == '+' ||string1[x] == '=' ||string1[x] == '/' 
+            ||string1[x] == ',' ||string1[x] == '.' ||string1[x] == '?' 
+            ||string1[x] == '\"' ||string1[x] == ':' ||string1[x] == ';' 
+            ||string1[x] == '\'')
+		{
+            lng--;
+        }
+    }
+
+    char newstr[lng-2];
+    char newchar;
+    for (int x = 0; x< match; x++){
+        if (string1[x] == ' ' ||string1[x] == '!' ||string1[x] == '@' 
+        ||string1[x] == '#' ||string1[x] == '$' ||string1[x] == '%' 
+        ||string1[x] == '^' ||string1[x] == '&' ||string1[x] == '*' 
+        ||string1[x] == '(' ||string1[x] == ')' ||string1[x] == '-' 
+        ||string1[x] == '+' ||string1[x] == '=' ||string1[x] == '/' 
+        ||string1[x] == ',' ||string1[x] == '.' ||string1[x] == '?' 
+        ||string1[x] == '\"' ||string1[x] == ':' ||string1[x] == ';' 
+        ||string1[x] == '\''){
+        }
+        else 
+        {
+            if (string1[x] == 'A' ||string1[x] == 'B' ||string1[x] == 'C' 
+            ||string1[x] == 'D' ||string1[x] == 'E' ||string1[x] == 'F' 
+            ||string1[x] == 'G' ||string1[x] == 'H' ||string1[x] == 'I' 
+            ||string1[x] == 'J' ||string1[x] == 'K' ||string1[x] == 'L' 
+            ||string1[x] == 'M' ||string1[x] == 'N' ||string1[x] == 'O' 
+            ||string1[x] == 'P' ||string1[x] == 'Q' ||string1[x] == 'R' 
+            ||string1[x] == 'S' ||string1[x] == 'T' ||string1[x] == 'U' 
+            ||string1[x] == 'V' ||string1[x] == 'W' ||string1[x] == 'X' 
+            ||string1[x] == 'Y' ||string1[x] == 'Z')
+            {
+            newchar = tolower(string1[x]);
+            
+
+            }
+            else 
+            {
+				newchar = string1[x];   //cponvert to integer char 
+            }
+            newstr[index] = newchar;
+            index++;
+        }
+    }
+    return newstr;
+}
