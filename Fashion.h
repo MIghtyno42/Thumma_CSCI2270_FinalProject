@@ -17,6 +17,12 @@ struct item{
 	string color;
 	string style;
 	string size;
+	item* parent;
+	item* first_child;
+	item* second_child;
+	item* third_child;
+	item* fourth_child;
+	item* fifth_child;
 };
 
 
