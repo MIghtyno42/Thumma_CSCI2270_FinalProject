@@ -26,3 +26,5 @@ Fashion::~Fashion()
 
 }
 
+
+Fashion::printInventory(Fashion *printnode)
