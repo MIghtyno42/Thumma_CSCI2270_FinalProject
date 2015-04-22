@@ -1,8 +1,7 @@
-// Deekshitha Thumma
-// Hoenigman 2270
-// Final Project
-// April 20th
-// Partner: Christine Samson
+//Deekshitha Thumma and Christine Samson
+//Hoenigman 2270
+//Final Project
+//April 20th
 
 #include <iostream>
 #include <string>
@@ -16,7 +15,7 @@ using namespace std;
 int main(int argc, char *argv[])
 {
 	int command;
-	
+
     while(command != 5)
     {
         cout<<"======Main Menu======"<<endl;
@@ -29,26 +28,25 @@ int main(int argc, char *argv[])
         cin >> command;
         cin.ignore(10000,'\n');
 
-        switch(input)
-        {
-			
-        case 1:
-            break;
-        case 2:
-            break;
-        case 3:
+        switch(command){
 
-            break;
-        case 4:;
-            break;
-        case 5:
-            cout<<"Goodbye!"<<endl;
-            break;
-        default:
-            cout<<"Not a valid menu selection"<<endl;
-            break;
+            case 1:
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            case 4:;
+                break;
+            case 5:
+                cout<<"Goodbye!"<<endl;
+                break;
+            default:
+                cout<<"Not a valid menu selection"<<endl;
+                break;
         }
     }
 
+    return 0;
 }
 

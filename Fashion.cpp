@@ -1,26 +1,24 @@
-// Deekshitha Thumma
-// Hoenigman 2270
-// Final Project
-// April 20th
-// Partner: Christine Samson
-
+//Deekshitha Thumma and Christine Samson
+//Hoenigman 2270
+//Final Project
+//April 20th
 
 #include <iostream>
 #include <string>
-#include "MovieTree.h"
+#include "Fashion.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <cmath>
 
-
 using namespace std;
 
-
+//constructor
 Fashion::Fashion()
 {
 
 }
 
+//destructor
 Fashion::~Fashion()
 {
 
