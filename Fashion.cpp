@@ -34,20 +34,30 @@ void Fashion::printInventory(item *foundItems, int sizeStock)
 }
 
 
-void Fashion::searchInventory(item *searchItems, int sizeStock, int search)
-{
+void Fashion::searchName(item *searchItems, int sizeStock, int searchName){
 	for(int i = 0; i < sizeStock; i++){
-		if(searchItems[i].nameBarCode == search)
+		if(searchItems[i].nameBarCode == searchName)
 		{
 			cout<<"Name:"<<searchItems[i].name<<endl;
 			cout<<"Type:" <<searchItems[i].type<<endl;
 			cout<<"Color:" <<searchItems[i].color<<endl;
-			cout<<"Style:" <<searchItems[i].style<<endl; 
+			cout<<"Style:" <<searchItems[i].style<<endl;
 		}
 	}
-		
+
 }
-		
-		
+
+void Fashion::searchColor(item *searchItems, int sizeStock, int searchColor){
+    for(int i = 0; i < sizeStock; i++){
+        if(searchItems[i].colorBarCode == searchColor){
+            cout<<"Name:"<<searchItems[i].name<<endl;
+			cout<<"Type:" <<searchItems[i].type<<endl;
+			cout<<"Color:" <<searchItems[i].color<<endl;
+			cout<<"Style:" <<searchItems[i].style<<endl;
+        }
+    }
+}
+
+
 
 

@@ -32,7 +32,8 @@ class Fashion
         Fashion();
         ~Fashion();
         void printInventory(item *foundItems, int stockSize);
-        void searchInventory(item *searchItems, int sizeStock, int search);
+        void searchName(item *searchItems, int sizeStock, int searchName);
+        void searchColor(item *searchItems, int sizeStock, int searchColor);
     protected:
     private:
         item *stock;

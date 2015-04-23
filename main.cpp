@@ -110,7 +110,7 @@ int main(int argc, char *argv[]){
 				string searchItem;
 				getline(cin, searchItem);
 				int searchItemNumber = barCode(searchItem);
-				inventory.searchInventory(stock, stockSize, searchItemNumber); 
+				inventory.searchColor(stock, stockSize, searchItemNumber);
 				}
                 break;
             case 3:
