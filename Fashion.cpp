@@ -84,7 +84,7 @@ void Fashion::filterInventory(item *searchItems, int sizeStock, int filterColor,
 
 }
 
-item *Fashion::filterType(item *searchItems, int sizeStock, int filterType){
+void Fashion::filterType(item *searchItems, int sizeStock, int filterType){
 	int counter = 0;
 	for(int i = 0; i < sizeStock; i++){
 		if(searchItems[i].typeBarCode == filterType){
@@ -92,6 +92,9 @@ item *Fashion::filterType(item *searchItems, int sizeStock, int filterType){
 		}
 	}
 	item *afterType = new item[counter];
+	for(int j = 0; j < counter; j++){
+        afterType[j].nameBarCode = -1;
+    }
 	for(int i = 0; i < sizeStock; i++){
 		if(searchItems[i].nameBarCode == searchName){
 			searchItems[i].name = afterName[counter].name;
@@ -104,7 +107,17 @@ item *Fashion::filterType(item *searchItems, int sizeStock, int filterType){
 			searchItems[i].styleBarcode = afterName[counter].styleBarcode;
 		}
 	}
-	return afterType;
+	testingPrint(afterType);
+}
+
+void Fashion::testingPrint(item *filterItems){
+    for(int i = 0; i < 30; i++){
+        while(filterItems[i].nameBarCode != -1){
+            cout<<filterItems[i].name<<endl;
+            cout<<filterItems[i].type<<endl;
+        }
+    }
+
 }
 
 
