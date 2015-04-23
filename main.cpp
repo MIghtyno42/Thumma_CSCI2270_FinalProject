@@ -40,23 +40,15 @@ int main(int argc, char *argv[])
     while (getline(data, token, ','))   //while we are reading in each line
     {
         counter++;
-        /*if (counter % 5 == 1)  // if first item in line
-        {
-            number = stoi(token);   //token is item number
-        }*/
 
         if (counter % 4 == 1) // if first item in line
         {
-            //name = convert(token);   //converting name to number and token is name of item
-            //cout << name << endl;
             sname = token;
             name = numbervalue(token);
-            //cout << name << endl;
         }
 
         if (counter % 4 == 2) // if second item in line
         {
-			//type = numbervalue(convert(token));
 			stype = token;
             type = numbervalue(token);
 
@@ -79,12 +71,16 @@ int main(int argc, char *argv[])
 			//cout << arr[i].number << endl;
 			arr[i].name = name;
 			cout << arr[i].name << endl;
+			arr[i].sname = sname;
 			arr[i].type = type;
 			cout << arr[i].type << endl;
+			arr[i].stype = stype;
 			arr[i].color = color;
 			cout << arr[i].color << endl;
+			arr[i].scolor = scolor;
 			arr[i].style = style;
 			cout << arr[i].style << endl;
+			arr[i].sstyle = sstyle;
 			i++;
 			counter++;
 		}
