@@ -12,61 +12,77 @@
 
 using namespace std;
 
-string convert(string string1);
-int numbervalue(string word);
+int barCode(string word){
+    int sum = 0;
+    for(int i = 0 ; i < word.length(); i++){
+        sum = sum + word[i];
+    }
+    return sum;
+}
 
-int main(int argc, char *argv[])
-{
+int main(int argc, char *argv[]){
 	ifstream data;
     string token;
     data.open(argv[1]);  //read in argument as file
 
     int counter = 0;
-    int i= 0;
+    int i = 0;
     //int number;   //item number
-    int size = 30;
-    int name;  //title
-    string sname;
-    int type;
-    string stype;
-    int color;
-    string scolor;
-    int style;
-    string sstyle;
+    int stockSize = 30;
+    int nameBarCode;  //title
+    string name;
+    int typeBarCode;
+    string type;
+    int colorBarCode;
+    string color;
+    int styleBarCode;
+    string style;
 
-    item *arr = new item[size];
+    item *stock = new item[stockSize];
 
-
-    while (getline(data, token, ','))   //while we are reading in each line
-    {
+    while (getline(data, token, ',')){
         counter++;
+<<<<<<< HEAD
 
         if (counter % 4 == 1) // if first item in line
         {
             sname = token;
             name = numbervalue(token);
+=======
+        if (counter % 4 == 1) // if first item in line
+        {
+            name = token;
+            nameBarCode = barCode(token);
+            //cout << name << endl;
+>>>>>>> 5def0be8c21af674a599bcb12f096738dac17ac9
         }
 
         if (counter % 4 == 2) // if second item in line
         {
+<<<<<<< HEAD
 			stype = token;
             type = numbervalue(token);
+=======
+			type = token;
+            typeBarCode = barCode(token);
+>>>>>>> 5def0be8c21af674a599bcb12f096738dac17ac9
 
         }
         if (counter % 4 == 3) // if third item in line
         {
 			//color = numbervalue(convert(token));
-			scolor = token;
-			color = numbervalue(token);
+			color = token;
+			colorBarCode = barCode(token);
 		}
 
         if (counter % 4 == 0) // if fourth item in line
         {
 			//style = numbervalue(convert(token));
-			sstyle = token;
-			style = numbervalue(token);
+			style = token;
+			styleBarCode = barCode(token);
 
 			cout << i << "------------" << endl;
+<<<<<<< HEAD
 			//arr[i].number = number;
 			//cout << arr[i].number << endl;
 			arr[i].name = name;
@@ -81,13 +97,23 @@ int main(int argc, char *argv[])
 			arr[i].style = style;
 			cout << arr[i].style << endl;
 			arr[i].sstyle = sstyle;
+=======
+			stock[i].nameBarCode = nameBarCode;
+			cout << stock[i].nameBarCode << endl;
+			stock[i].typeBarCode = typeBarCode;
+			cout << stock[i].typeBarCode << endl;
+			stock[i].colorBarCode = colorBarCode;
+			cout << stock[i].colorBarCode << endl;
+			stock[i].styleBarCode = styleBarCode;
+			cout << stock[i].styleBarCode << endl;
+>>>>>>> 5def0be8c21af674a599bcb12f096738dac17ac9
 			i++;
 			counter++;
 		}
 	}
 
 	int command;
-	Fashion inventory;
+	Fashion inventory = new Fashion(stockSize);
 
     while(command != 5)
     {
@@ -104,7 +130,7 @@ int main(int argc, char *argv[])
         switch(command){
 
             case 1:
-				inventory.printInventory(arr, size);
+				inventory.printInventory();
                 break;
             case 2:
                 break;
@@ -123,73 +149,4 @@ int main(int argc, char *argv[])
 	data.close();
     return 0;
 }
-
-string convert(string string1){
-    int lng = string1.length();
-    int match = string1.length();
-    int index = 0;
-
-
-    for (int x = 0; x< string1.length(); x++){                         //if the character is a symbol
-        if (string1[x] == ' ' ||string1[x] == '!' ||string1[x] == '@'
-            ||string1[x] == '#' ||string1[x] == '$' ||string1[x] == '%'
-            ||string1[x] == '^' ||string1[x] == '&' ||string1[x] == '*'
-            ||string1[x] == '(' ||string1[x] == ')' ||string1[x] == '-'
-            ||string1[x] == '+' ||string1[x] == '=' ||string1[x] == '/'
-            ||string1[x] == ',' ||string1[x] == '.' ||string1[x] == '?'
-            ||string1[x] == '\"' ||string1[x] == ':' ||string1[x] == ';'
-            ||string1[x] == '\'')
-		{
-            lng--;
-        }
-    }
-
-    char newstr[lng-2];
-    char newchar;
-    for (int x = 0; x< match; x++){
-        if (string1[x] == ' ' ||string1[x] == '!' ||string1[x] == '@'
-        ||string1[x] == '#' ||string1[x] == '$' ||string1[x] == '%'
-        ||string1[x] == '^' ||string1[x] == '&' ||string1[x] == '*'
-        ||string1[x] == '(' ||string1[x] == ')' ||string1[x] == '-'
-        ||string1[x] == '+' ||string1[x] == '=' ||string1[x] == '/'
-        ||string1[x] == ',' ||string1[x] == '.' ||string1[x] == '?'
-        ||string1[x] == '\"' ||string1[x] == ':' ||string1[x] == ';'
-        ||string1[x] == '\''){
-        }
-        else
-        {
-            if (string1[x] == 'A' ||string1[x] == 'B' ||string1[x] == 'C'
-            ||string1[x] == 'D' ||string1[x] == 'E' ||string1[x] == 'F'
-            ||string1[x] == 'G' ||string1[x] == 'H' ||string1[x] == 'I'
-            ||string1[x] == 'J' ||string1[x] == 'K' ||string1[x] == 'L'
-            ||string1[x] == 'M' ||string1[x] == 'N' ||string1[x] == 'O'
-            ||string1[x] == 'P' ||string1[x] == 'Q' ||string1[x] == 'R'
-            ||string1[x] == 'S' ||string1[x] == 'T' ||string1[x] == 'U'
-            ||string1[x] == 'V' ||string1[x] == 'W' ||string1[x] == 'X'
-            ||string1[x] == 'Y' ||string1[x] == 'Z')
-            {
-            newchar = tolower(string1[x]);
-
-
-            }
-            else
-            {
-				newchar = string1[x];
-            }
-            newstr[index] = newchar;
-            index++;
-        }
-    }
-    return newstr;
-}
-int numbervalue(string word)
-{
-    int sum = 0;
-    for(int i = 0 ; i < word.length(); i++)
-    {
-        sum = sum + word[i];
-    }
-    return sum;
-}
-
 
