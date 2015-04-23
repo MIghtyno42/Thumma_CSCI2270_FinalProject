@@ -29,7 +29,7 @@ struct item{
 class Fashion
 {
     public:
-        Fashion(int inventorySize);
+        Fashion();
         ~Fashion();
         void printInventory(item *foundItems);
 

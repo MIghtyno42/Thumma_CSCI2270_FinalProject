@@ -13,9 +13,7 @@
 using namespace std;
 
 //constructor
-Fashion::Fashion(int inventorySize){
-    stock = new item[inventorySize];
-    sizeStock = inventorySize;
+Fashion::Fashion(){
 
 }
 
