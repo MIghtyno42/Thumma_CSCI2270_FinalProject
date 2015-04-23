@@ -79,11 +79,32 @@ void Fashion::searchStyle(item *searchItems, int sizeStock, int searchStyle){
     }
 }
 
-//void Fashion::filterInventory(item *searchItems, int sizeStock, int filterColor, int filterStyle, int filterType){
+void Fashion::filterInventory(item *searchItems, int sizeStock, int filterColor, int filterStyle, int filterType){
 
 
-//}
+}
 
-
+item *Fashion::filterType(item *searchItems, int sizeStock, int filterType){
+	int counter = 0;
+	for(int i = 0; i < sizeStock; i++){
+		if(searchItems[i].typeBarCode == filterType){
+			counter++;
+		}
+	}
+	item *afterType = new item[counter];
+	for(int i = 0; i < sizeStock; i++){
+		if(searchItems[i].nameBarCode == searchName){
+			searchItems[i].name = afterName[counter].name;
+			searchItems[i].nameBarcode = afterName[counter].nameBarcode;
+			searchItems[i].type = afterName[counter].type;
+			searchItems[i].typeBarcode = afterName[counter].typeBarcode;
+			searchItems[i].color = afterName[counter].color;
+			searchItems[i].colorBarcode = afterName[counter].colorBarcode;
+			searchItems[i].style = afterName[counter].style;
+			searchItems[i].styleBarcode = afterName[counter].styleBarcode;
+		}
+	}
+	return afterType;
+}
 
 

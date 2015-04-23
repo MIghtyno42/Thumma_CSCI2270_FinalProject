@@ -36,6 +36,7 @@ class Fashion
         void searchColor(item *searchItems, int sizeStock, int searchColor);
         void searchType(item *searchItems, int sizeStock, int searchType);
         void searchStyle(item *searchItems, int sizeStock, int searchStyle);
+        item *filterType(item *searchItems, int sizeStock, int filterType);
     protected:
     private:
         item *stock;
