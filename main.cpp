@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
     int counter = 0;
     int i= 0; 
     int number;   //item number 
-    int size = 0;
+    int size = 100;
     int name;  //title
     int type;
     int color;
@@ -35,7 +35,6 @@ int main(int argc, char *argv[])
     
     while (getline(data, token, ','))   //while we are reading in each line 
     {
-		//i++;
         counter++;
         if (counter % 5 == 1)  // if first item in line 
         {
@@ -66,7 +65,6 @@ int main(int argc, char *argv[])
         {
 			//style = numbervalue(convert(token));
 			style = numbervalue(token);
-			
 			
 			cout << i << "------------" << endl;
 			arr[i].number = number;
