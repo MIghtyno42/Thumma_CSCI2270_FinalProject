@@ -13,7 +13,7 @@
 using namespace std;
 
 string convert(string string1);
-string display(string word);
+int numbervalue(string word);
 
 int main(int argc, char *argv[])
 {
@@ -97,7 +97,7 @@ int main(int argc, char *argv[])
 
             case 1:
 				cout << convert("cheese") << endl;
-				cout << display("cheese") << endl;
+				cout << numbervalue("cheese") << endl;
                 break;
             case 2:
                 break;
@@ -175,23 +175,12 @@ string convert(string string1){
     }
     return newstr;
 }
-
-string display(string word) {
-	int a = new int[100]
-   cout << "\nSentence entered is \n" << word;
-   len=word.length();
-   cout << "\n\nLength of sentence is " << len;
-   cout << "\n\nThe ASCII for each character are as follows :\n\n";
-   for (int x=0;x < len;x++) {    // While the string isn't at the end...
-        cout << word[x] << " : "<< int(word[x]) << "\n";    // Display char and ascii
-        a[x]=int(word[x]);   // storing ascii code of each character in an array
+int numbervalue(string word)
+{
+    int sum = 0;
+    for(int i = 0 ; i < word.length(); i++)
+    {
+        sum = sum + word[i];
     }
-    cout << "\n";
-    // reversing ascii to characters
-    cout << "Reversing ASCII codes back to characters\n\n ";
-    for (intx=0;x <len;x++) {
-        cout << char(a[x]);
-    }
-    cout << "\n\n";
-return word;
+    return(sum);
 }
