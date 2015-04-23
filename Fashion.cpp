@@ -13,8 +13,8 @@
 using namespace std;
 
 //constructor
-Fashion::Fashion(){
-
+Fashion::Fashion(int inventorySize){
+    stock = new item[inventorySize];
 
 }
 
@@ -27,7 +27,7 @@ Fashion::~Fashion()
 
 void Fashion::printInventory(item *array, int size)
 {
-	for(int i = 0;i<size; i++)
+	for(int i = 0;i < size; i++)
 	{
 		cout << "Name: " << array[i].sname << endl;
 	}
