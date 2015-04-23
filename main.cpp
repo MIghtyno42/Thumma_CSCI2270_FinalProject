@@ -12,8 +12,73 @@
 
 using namespace std;
 
+string convert(string string1);
+string display(string word);
+
 int main(int argc, char *argv[])
 {
+	ifstream data;   
+    string token;
+    data.open(argv[1]);  //read in argument as file 
+    
+    int counter = 0; 
+    int number = 0;   //item number 
+    int size = 0;
+    string name;  //title
+    string type;
+    string color;
+    string style;
+    
+    item *arr = new item[size];
+    
+    
+    while (getline(data, token, ','))   //while we are reading in each line 
+    {
+        counter++;
+        if (counter % 5 == 1)  // if first item in line 
+        {
+            number = stoi(token);   //token is item number
+        }
+
+        if (counter % 5 == 2) // if second item in line 
+        { 
+            name = convert(token);   //converting name to number and token is name of item
+        }
+        
+        if (counter % 5 == 3) // if third item in line
+        {
+            type = convert(token); 
+
+        }
+        if (counter % 5 == 4) // if fourth item in line
+        {
+			color = convert(token);
+		}
+		
+        if (counter % 5 == 0) // if fifth item in line
+        {
+			style = convert(token);
+			
+			arr[counter].number = number;
+			arr[counter].name = name;
+			arr[counter].type = type;
+			arr[counter].color = color;
+			arr[counter].style = style;
+			
+            counter++;
+		}
+	}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	int command;
 
     while(command != 5)
@@ -31,6 +96,8 @@ int main(int argc, char *argv[])
         switch(command){
 
             case 1:
+				cout << convert("cheese") << endl;
+				cout << display("cheese") << endl;
                 break;
             case 2:
                 break;
@@ -107,4 +174,24 @@ string convert(string string1){
         }
     }
     return newstr;
+}
+
+string display(string word) {
+	int a = new int[100]
+   cout << "\nSentence entered is \n" << word;
+   len=word.length();
+   cout << "\n\nLength of sentence is " << len;
+   cout << "\n\nThe ASCII for each character are as follows :\n\n";
+   for (int x=0;x < len;x++) {    // While the string isn't at the end...
+        cout << word[x] << " : "<< int(word[x]) << "\n";    // Display char and ascii
+        a[x]=int(word[x]);   // storing ascii code of each character in an array
+    }
+    cout << "\n";
+    // reversing ascii to characters
+    cout << "Reversing ASCII codes back to characters\n\n ";
+    for (intx=0;x <len;x++) {
+        cout << char(a[x]);
+    }
+    cout << "\n\n";
+return word;
 }
