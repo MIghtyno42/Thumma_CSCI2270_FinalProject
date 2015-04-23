@@ -42,22 +42,22 @@ int main(int argc, char *argv[])
 
         if (counter % 5 == 2) // if second item in line 
         { 
-            name = convert(token);   //converting name to number and token is name of item
+            name = numbervalue(convert(token));   //converting name to number and token is name of item
         }
         
         if (counter % 5 == 3) // if third item in line
         {
-            type = convert(token); 
+            type = numbervalue(convert(token)); 
 
         }
         if (counter % 5 == 4) // if fourth item in line
         {
-			color = convert(token);
+			color = numbervalue(convert(token));
 		}
 		
         if (counter % 5 == 0) // if fifth item in line
         {
-			style = convert(token);
+			style = numbervalue(convert(token));
 			
 			arr[counter].number = number;
 			arr[counter].name = name;
@@ -69,16 +69,6 @@ int main(int argc, char *argv[])
 		}
 	}
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	int command;
 
     while(command != 5)
