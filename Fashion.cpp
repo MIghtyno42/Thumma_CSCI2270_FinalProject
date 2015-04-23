@@ -15,20 +15,18 @@ using namespace std;
 //constructor
 Fashion::Fashion(int inventorySize){
     stock = new item[inventorySize];
+    sizeStock = inventorySize;
 
 }
 
 //destructor
-Fashion::~Fashion()
-{
+Fashion::~Fashion(){
 
 }
 
 
-void Fashion::printInventory(item *array, int size)
-{
-	for(int i = 0;i < size; i++)
-	{
-		cout << "Name: " << array[i].sname << endl;
+void Fashion::printInventory(item *foundItems){
+	for(int i = 0; i < sizeStock; i++){
+		cout<<"Name: "<<foundItems[i].name<<endl;
 	}
 }
