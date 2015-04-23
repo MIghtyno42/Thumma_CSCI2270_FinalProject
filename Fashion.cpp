@@ -79,10 +79,10 @@ void Fashion::searchStyle(item *searchItems, int sizeStock, int searchStyle){
     }
 }
 
-void Fashion::filterInventory(item *searchItems, int sizeStock, int filterColor, int filterStyle, int filterType){
+//void Fashion::filterInventory(item *searchItems, int sizeStock, int filterColor, int filterStyle, int filterType){
 
 
-}
+//}
 
 void Fashion::filterType(item *searchItems, int sizeStock, int filterType){
 	int counter = 0;
@@ -96,15 +96,16 @@ void Fashion::filterType(item *searchItems, int sizeStock, int filterType){
         afterType[j].nameBarCode = -1;
     }
 	for(int i = 0; i < sizeStock; i++){
-		if(searchItems[i].nameBarCode == searchName){
-			searchItems[i].name = afterName[counter].name;
-			searchItems[i].nameBarcode = afterName[counter].nameBarcode;
-			searchItems[i].type = afterName[counter].type;
-			searchItems[i].typeBarcode = afterName[counter].typeBarcode;
-			searchItems[i].color = afterName[counter].color;
-			searchItems[i].colorBarcode = afterName[counter].colorBarcode;
-			searchItems[i].style = afterName[counter].style;
-			searchItems[i].styleBarcode = afterName[counter].styleBarcode;
+		if(searchItems[i].nameBarCode == filterType)
+		{
+			searchItems[i].name = afterType[counter].name;
+			searchItems[i].nameBarCode = afterType[counter].nameBarCode;
+			searchItems[i].type = afterType[counter].type;
+			searchItems[i].typeBarCode = afterType[counter].typeBarCode;
+			searchItems[i].color = afterType[counter].color;
+			searchItems[i].colorBarCode = afterType[counter].colorBarCode;
+			searchItems[i].style = afterType[counter].style;
+			searchItems[i].styleBarCode = afterType[counter].styleBarCode;
 		}
 	}
 	testingPrint(afterType);
