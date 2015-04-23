@@ -21,19 +21,21 @@ int main(int argc, char *argv[])
     string token;
     data.open(argv[1]);  //read in argument as file 
     
-    int counter = 0; 
-    int number = 0;   //item number 
+    int counter = 0;
+    int i= 0; 
+    int number;   //item number 
     int size = 0;
-    string name;  //title
-    string type;
-    string color;
-    string style;
+    int name;  //title
+    int type;
+    int color;
+    int style;
     
     item *arr = new item[size];
     
     
     while (getline(data, token, ','))   //while we are reading in each line 
     {
+		//i++;
         counter++;
         if (counter % 5 == 1)  // if first item in line 
         {
@@ -42,30 +44,43 @@ int main(int argc, char *argv[])
 
         if (counter % 5 == 2) // if second item in line 
         { 
-            name = numbervalue(convert(token));   //converting name to number and token is name of item
+            //name = convert(token);   //converting name to number and token is name of item
+            //cout << name << endl;
+            name = numbervalue(token);
+            //cout << name << endl;
         }
         
         if (counter % 5 == 3) // if third item in line
         {
-            type = numbervalue(convert(token)); 
+			//type = numbervalue(convert(token)); 
+            type = numbervalue(token); 
 
         }
         if (counter % 5 == 4) // if fourth item in line
         {
-			color = numbervalue(convert(token));
+			//color = numbervalue(convert(token));
+			color = numbervalue(token);
 		}
 		
         if (counter % 5 == 0) // if fifth item in line
         {
-			style = numbervalue(convert(token));
+			//style = numbervalue(convert(token));
+			style = numbervalue(token);
 			
-			arr[counter].number = number;
-			arr[counter].name = name;
-			arr[counter].type = type;
-			arr[counter].color = color;
-			arr[counter].style = style;
 			
-            counter++;
+			cout << i << "------------" << endl;
+			arr[i].number = number;
+			cout << arr[i].number << endl;
+			arr[i].name = name;
+			cout << arr[i].name << endl;
+			arr[i].type = type;
+			cout << arr[i].type << endl;
+			arr[i].color = color;
+			cout << arr[i].color << endl;
+			arr[i].style = style;
+			cout << arr[i].style << endl; 
+			i++;
+			counter++;
 		}
 	}
 
@@ -86,8 +101,10 @@ int main(int argc, char *argv[])
         switch(command){
 
             case 1:
-				cout << convert("cheese") << endl;
-				cout << numbervalue("cheese") << endl;
+				//cout << convert("cheese") << endl;
+				//cout << numbervalue(" Cheese") << endl;
+				//cout << numbervalue("cheese") << endl;
+				
                 break;
             case 2:
                 break;
@@ -103,7 +120,7 @@ int main(int argc, char *argv[])
                 break;
         }
     }
-
+	data.close();
     return 0;
 }
 
@@ -157,7 +174,7 @@ string convert(string string1){
             }
             else 
             {
-				newchar = string1[x];   //cponvert to integer char 
+				newchar = string1[x];  
             }
             newstr[index] = newchar;
             index++;
@@ -172,5 +189,7 @@ int numbervalue(string word)
     {
         sum = sum + word[i];
     }
-    return(sum);
+    return sum;
 }
+
+
