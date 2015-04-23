@@ -23,7 +23,8 @@ Fashion::~Fashion(){
 }
 
 
-void Fashion::printInventory(item *foundItems){
+void Fashion::printInventory(item *foundItems, int sizeStock)
+{
 	for(int i = 0; i < sizeStock; i++){
 		cout<<"Name: "<<foundItems[i].name<<endl;
 	}
