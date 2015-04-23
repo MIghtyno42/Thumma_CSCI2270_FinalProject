@@ -100,7 +100,7 @@ int main(int argc, char *argv[]){
         switch(command){
 
             case 1:
-				inventory.printInventory();
+				inventory.printInventory(stock);
                 break;
             case 2:
                 break;
