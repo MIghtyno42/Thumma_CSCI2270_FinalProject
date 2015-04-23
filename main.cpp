@@ -25,7 +25,7 @@ int main(int argc, char *argv[]){
     string token;
     data.open(argv[1]);  //read in argument as file
 
-    int counter = 0;
+
     int i = 0;
     //int number;   //item number
     int stockSize = 30;
@@ -104,6 +104,12 @@ int main(int argc, char *argv[]){
 				inventory.printInventory(stock, stockSize);
                 break;
             case 2:
+				{
+				string searchItem;
+				getline(cin, searchItem);
+				int searchItemNumber = barCode(searchItem);
+				inventory.searchInventory(stock, stockSize, searchItemNumber); 
+				}
                 break;
             case 3:
                 break;
