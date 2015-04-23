@@ -42,17 +42,30 @@ int main(int argc, char *argv[]){
 
     while (getline(data, token, ',')){
         counter++;
+<<<<<<< HEAD
+
+        if (counter % 4 == 1) // if first item in line
+        {
+            sname = token;
+            name = numbervalue(token);
+=======
         if (counter % 4 == 1) // if first item in line
         {
             name = token;
             nameBarCode = barCode(token);
             //cout << name << endl;
+>>>>>>> 5def0be8c21af674a599bcb12f096738dac17ac9
         }
 
         if (counter % 4 == 2) // if second item in line
         {
+<<<<<<< HEAD
+			stype = token;
+            type = numbervalue(token);
+=======
 			type = token;
             typeBarCode = barCode(token);
+>>>>>>> 5def0be8c21af674a599bcb12f096738dac17ac9
 
         }
         if (counter % 4 == 3) // if third item in line
@@ -69,6 +82,22 @@ int main(int argc, char *argv[]){
 			styleBarCode = barCode(token);
 
 			cout << i << "------------" << endl;
+<<<<<<< HEAD
+			//arr[i].number = number;
+			//cout << arr[i].number << endl;
+			arr[i].name = name;
+			cout << arr[i].name << endl;
+			arr[i].sname = sname;
+			arr[i].type = type;
+			cout << arr[i].type << endl;
+			arr[i].stype = stype;
+			arr[i].color = color;
+			cout << arr[i].color << endl;
+			arr[i].scolor = scolor;
+			arr[i].style = style;
+			cout << arr[i].style << endl;
+			arr[i].sstyle = sstyle;
+=======
 			stock[i].nameBarCode = nameBarCode;
 			cout << stock[i].nameBarCode << endl;
 			stock[i].typeBarCode = typeBarCode;
@@ -77,6 +106,7 @@ int main(int argc, char *argv[]){
 			cout << stock[i].colorBarCode << endl;
 			stock[i].styleBarCode = styleBarCode;
 			cout << stock[i].styleBarCode << endl;
+>>>>>>> 5def0be8c21af674a599bcb12f096738dac17ac9
 			i++;
 			counter++;
 		}
