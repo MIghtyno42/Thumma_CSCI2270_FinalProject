@@ -13,26 +13,29 @@
 
 struct item{
 	//int number;
-	std::string sname;
-	int name;
-	std::string stype;
-	int type;
-	std::string scolor;
-	int color;
-	std::string sstyle;
-	int style;
+	std::string name;
+	int nameBarCode;
+	std::string type;
+	int typeBarCode;
+	std::string color;
+	int colorBarCode;
+	std::string style;
+	int styleBarCode;
+	item(){};
+
 };
 
 
 class Fashion
 {
     public:
-        Fashion();
+        Fashion(int inventorySize);
         ~Fashion();
         void printInventory(item *array, int size);
 
     protected:
     private:
+        item *stock;
 
 
 };
