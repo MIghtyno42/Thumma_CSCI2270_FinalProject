@@ -86,11 +86,13 @@ int main(int argc, char *argv[]){
 	int command;
 	Fashion inventory;
 
+    string searchItem;
+
     while(command != 5)
     {
         cout<<"======Main Menu======"<<endl;
-        cout<<"1. "<<endl;
-        cout<<"2. "<<endl;
+        cout<<"1. Print the inventory "<<endl;
+        cout<<"2. Search for an item"<<endl;
         cout<<"3. "<<endl;
         cout<<"4. "<<endl;
         cout<<"5. "<<endl;
