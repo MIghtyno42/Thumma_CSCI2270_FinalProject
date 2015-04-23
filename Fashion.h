@@ -31,7 +31,7 @@ class Fashion
     public:
         Fashion();
         ~Fashion();
-        void printInventory(item *foundItems);
+        void printInventory(item *foundItems, int stockSize);
 
     protected:
     private:
