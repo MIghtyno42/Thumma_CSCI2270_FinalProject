@@ -23,14 +23,9 @@ Fashion::~Fashion(){
 }
 
 
-<<<<<<< HEAD
-void Fashion::printInventory(item *foundItems, int stockSize){
-	for(int i = 0; i < stockSize; i++){
-=======
 void Fashion::printInventory(item *foundItems, int sizeStock)
 {
 	for(int i = 0; i < sizeStock; i++){
->>>>>>> a81745cedc0f6e2236292baf419643390f245946
 		cout<<"Name: "<<foundItems[i].name<<endl;
 	}
 }
