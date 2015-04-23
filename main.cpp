@@ -70,12 +70,16 @@ int main(int argc, char *argv[]){
 
 			cout << i << "------------" << endl;
 			stock[i].nameBarCode = nameBarCode;
+			stock[i].name = name;
 			cout << stock[i].nameBarCode << endl;
 			stock[i].typeBarCode = typeBarCode;
+			stock[i].type = type;
 			cout << stock[i].typeBarCode << endl;
 			stock[i].colorBarCode = colorBarCode;
+			stock[i].color = color;
 			cout << stock[i].colorBarCode << endl;
 			stock[i].styleBarCode = styleBarCode;
+			stock[i].style = style;
 			cout << stock[i].styleBarCode << endl;
 			i++;
 			counter++;
@@ -83,7 +87,7 @@ int main(int argc, char *argv[]){
 	}
 
 	int command;
-	Fashion inventory = new Fashion(stockSize);
+	Fashion inventory;
 
     while(command != 5)
     {
