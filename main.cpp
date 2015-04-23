@@ -37,54 +37,51 @@ int main(int argc, char *argv[]){
     string color;
     int styleBarCode;
     string style;
+    string contents;
 
     item *stock = new item[stockSize];
 
-    while (getline(data, token, ',')){
-        counter++;
-        if (counter % 4 == 1) // if first item in line
-        {
-            name = token;
-            nameBarCode = barCode(token);
-            //cout << name << endl;
+    while(!data.eof()){
+        //gathering the other data in the file
+        std::getline(data, contents);
+        if(contents != ""){
+            //parsing the file
+            size_t lastcomma = contents.find_last_of(",");
+            size_t middlecomma = contents.find_last_of(",",lastcomma-1);
+            size_t firstcomma = contents.find_last_of(",",middlecomma-1);
+            //putting each word in its place
+            name = contents.substr(0,firstcomma).c_str();
+            type = contents.substr(firstcomma+1,(middlecomma-firstcomma-1)).c_str();
+            color = contents.substr(middlecomma+1,(lastcomma-middlecomma-1)).c_str();
+            style = contents.substr(lastcomma+1).c_str();
+            //getting the bar code for each
+            nameBarCode = barCode(name);
+            typeBarCode = barCode(type);
+            colorBarCode = barCode(color);
+            styleBarCode = barCode(style);
+
+            stock[i].name = name;
+            stock[i].nameBarCode = nameBarCode;
+            stock[i].type = type;
+            stock[i].typeBarCode = typeBarCode;
+            stock[i].color = color;
+            stock[i].colorBarCode = colorBarCode;
+            stock[i].style = style;
+            stock[i].styleBarCode = styleBarCode;
+
+            i++;
         }
-
-        if (counter % 4 == 2) // if second item in line
-        {
-			type = token;
-            typeBarCode = barCode(token);
-
-        }
-        if (counter % 4 == 3) // if third item in line
-        {
-			//color = numbervalue(convert(token));
-			color = token;
-			colorBarCode = barCode(token);
-		}
-
-        if (counter % 4 == 0) // if fourth item in line
-        {
-			//style = numbervalue(convert(token));
-			style = token;
-			styleBarCode = barCode(token);
-
-			cout << i << "------------" << endl;
-			stock[i].nameBarCode = nameBarCode;
-			stock[i].name = name;
-			cout << stock[i].nameBarCode << endl;
-			stock[i].typeBarCode = typeBarCode;
-			stock[i].type = type;
-			cout << stock[i].typeBarCode << endl;
-			stock[i].colorBarCode = colorBarCode;
-			stock[i].color = color;
-			cout << stock[i].colorBarCode << endl;
-			stock[i].styleBarCode = styleBarCode;
-			stock[i].style = style;
-			cout << stock[i].styleBarCode << endl;
-			i++;
-			counter++;
-		}
-	}
+    }
+    for(int k = 0; k < stockSize; k++){
+        cout<<"NAME "<<stock[k].name<<endl;
+        cout<<"NAME BAR CODE "<<stock[k].nameBarCode<<endl;
+        cout<<"TYPE "<<stock[k].type<<endl;
+        cout<<"TYPE BAR CODE "<<stock[k].typeBarCode<<endl;
+        cout<<"COLOR "<<stock[k].color<<endl;
+        cout<<"COLOR BAR CODE "<<stock[k].colorBarCode<<endl;
+        cout<<"STYLE "<<stock[k].style<<endl;
+        cout<<"STYLE BAR CODE "<<stock[k].styleBarCode<<endl;
+    }
 
 	int command;
 	Fashion inventory;
