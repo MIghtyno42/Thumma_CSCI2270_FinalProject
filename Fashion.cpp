@@ -31,3 +31,4 @@ Fashion::printInventory(item *array, int size)
 	{
 		cout << "Name: " << array[i].sname << endl;
 	}
+}
