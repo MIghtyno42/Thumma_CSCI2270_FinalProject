@@ -34,7 +34,8 @@ class Fashion
     protected:
     private:
 
+
 };
 
-#endif 
+#endif
 
