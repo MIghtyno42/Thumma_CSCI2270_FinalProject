@@ -32,7 +32,7 @@ class Fashion
         Fashion();
         ~Fashion();
         void printInventory(item *foundItems, int stockSize);
-
+        void searchInventory(item *searchItems, int stockSize, int searchItem);
     protected:
     private:
         item *stock;
