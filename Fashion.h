@@ -31,11 +31,12 @@ class Fashion
     public:
         Fashion(int inventorySize);
         ~Fashion();
-        void printInventory(item *array, int size);
+        void printInventory(item *foundItems);
 
     protected:
     private:
         item *stock;
+        int sizeStock;
 
 
 };
