@@ -25,4 +25,9 @@ Fashion::~Fashion()
 }
 
 
-Fashion::printInventory(Fashion *printnode)
+Fashion::printInventory(item *array, int size)
+{
+	for(int i = 0;i<size; i++)
+	{
+		cout << "Name: " << array[i].sname << endl;
+	}

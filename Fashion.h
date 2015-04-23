@@ -12,12 +12,15 @@
 
 
 struct item{
-	int number;
-	string name;
-	string type;
-	string color;
-	string style;
-	string size;
+	//int number;
+	std::string sname;
+	int name;
+	std::string stype;
+	int type;
+	std::string scolor;
+	int color;
+	std::string sstyle;
+	int style;
 };
 
 
@@ -26,7 +29,7 @@ class Fashion
     public:
         Fashion();
         ~Fashion();
-        void printInventory();
+        void printInventory(item *array, int size);
 
     protected:
     private:

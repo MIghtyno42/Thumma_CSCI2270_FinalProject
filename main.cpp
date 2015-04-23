@@ -26,9 +26,13 @@ int main(int argc, char *argv[])
     //int number;   //item number 
     int size = 30;
     int name;  //title
+    string sname;
     int type;
+    string stype;
     int color;
+    string scolor;
     int style;
+    string sstyle;
     
     item *arr = new item[size];
     
@@ -45,6 +49,7 @@ int main(int argc, char *argv[])
         { 
             //name = convert(token);   //converting name to number and token is name of item
             //cout << name << endl;
+            sname = token;
             name = numbervalue(token);
             //cout << name << endl;
         }
@@ -52,18 +57,21 @@ int main(int argc, char *argv[])
         if (counter % 4 == 2) // if second item in line
         {
 			//type = numbervalue(convert(token)); 
+			stype = token;
             type = numbervalue(token); 
 
         }
         if (counter % 4 == 3) // if third item in line
         {
 			//color = numbervalue(convert(token));
+			scolor = token;
 			color = numbervalue(token);
 		}
 		
         if (counter % 4 == 0) // if fourth item in line
         {
 			//style = numbervalue(convert(token));
+			sstyle = token;
 			style = numbervalue(token);
 			
 			cout << i << "------------" << endl;
@@ -83,6 +91,7 @@ int main(int argc, char *argv[])
 	}
 
 	int command;
+	Fashion items();
 
     while(command != 5)
     {
@@ -99,13 +108,7 @@ int main(int argc, char *argv[])
         switch(command){
 
             case 1:
-				//cout << convert("cheese") << endl;
-				//cout << numbervalue(" Cheese") << endl;
-				//cout << numbervalue("cheese") << endl;
-				//for(int i = 0; i < size; i++)
-				//{
-					//cout << arr[i].name << endl;
-				//}
+				items.printInventory(arr, size);
 				
                 break;
             case 2:
