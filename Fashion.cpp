@@ -87,25 +87,30 @@ void Fashion::searchStyle(item *searchItems, int sizeStock, int searchStyle){
 void Fashion::filterType(item *searchItems, int sizeStock, int filterType){
 	int counter = 0;
 	for(int i = 0; i < sizeStock; i++){
+        cout<<"first for loop"<<endl;
 		if(searchItems[i].typeBarCode == filterType){
 			counter++;
 		}
 	}
-	item *afterType = new item[counter];
-	for(int j = 0; j < counter; j++){
+	item *afterType = new item[counter+1];
+	for(int j = 0; j < counter+1; j++){
+	    cout<<"second for loop"<<endl;
         afterType[j].nameBarCode = -1;
     }
+    int s = 0;
 	for(int i = 0; i < sizeStock; i++){
-		if(searchItems[i].nameBarCode == filterType)
-		{
-			searchItems[i].name = afterType[counter].name;
-			searchItems[i].nameBarCode = afterType[counter].nameBarCode;
-			searchItems[i].type = afterType[counter].type;
-			searchItems[i].typeBarCode = afterType[counter].typeBarCode;
-			searchItems[i].color = afterType[counter].color;
-			searchItems[i].colorBarCode = afterType[counter].colorBarCode;
-			searchItems[i].style = afterType[counter].style;
-			searchItems[i].styleBarCode = afterType[counter].styleBarCode;
+	    cout<<"third for loop"<<endl;
+		if(searchItems[i].typeBarCode == filterType){
+		    cout<<"if conditional statement"<<endl;
+			afterType[s].name = searchItems[i].name;
+			afterType[s].nameBarCode = searchItems[i].nameBarCode;
+			afterType[s].type = searchItems[i].type;
+			afterType[s].typeBarCode = searchItems[i].typeBarCode;
+			afterType[s].color = searchItems[i].color;
+			afterType[s].colorBarCode = searchItems[i].colorBarCode;
+			afterType[s].style = searchItems[i].style;
+			afterType[s].styleBarCode = searchItems[i].styleBarCode;
+			s++;
 		}
 	}
 	testingPrint(afterType);
@@ -113,12 +118,11 @@ void Fashion::filterType(item *searchItems, int sizeStock, int filterType){
 
 void Fashion::testingPrint(item *filterItems){
     for(int i = 0; i < 30; i++){
-        while(filterItems[i].nameBarCode != -1){
+        if(filterItems[i].nameBarCode != -1){
             cout<<filterItems[i].name<<endl;
             cout<<filterItems[i].type<<endl;
         }
     }
-
 }
 
 
