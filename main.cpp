@@ -23,8 +23,8 @@ int main(int argc, char *argv[])
     
     int counter = 0;
     int i= 0; 
-    int number;   //item number 
-    int size = 100;
+    //int number;   //item number 
+    int size = 30;
     int name;  //title
     int type;
     int color;
@@ -36,12 +36,12 @@ int main(int argc, char *argv[])
     while (getline(data, token, ','))   //while we are reading in each line 
     {
         counter++;
-        if (counter % 5 == 1)  // if first item in line 
+        /*if (counter % 5 == 1)  // if first item in line 
         {
             number = stoi(token);   //token is item number
-        }
+        }*/
 
-        if (counter % 5 == 2) // if second item in line 
+        if (counter % 4 == 1) // if first item in line 
         { 
             //name = convert(token);   //converting name to number and token is name of item
             //cout << name << endl;
@@ -49,26 +49,26 @@ int main(int argc, char *argv[])
             //cout << name << endl;
         }
         
-        if (counter % 5 == 3) // if third item in line
+        if (counter % 4 == 2) // if second item in line
         {
 			//type = numbervalue(convert(token)); 
             type = numbervalue(token); 
 
         }
-        if (counter % 5 == 4) // if fourth item in line
+        if (counter % 4 == 3) // if third item in line
         {
 			//color = numbervalue(convert(token));
 			color = numbervalue(token);
 		}
 		
-        if (counter % 5 == 0) // if fifth item in line
+        if (counter % 4 == 0) // if fourth item in line
         {
 			//style = numbervalue(convert(token));
 			style = numbervalue(token);
 			
 			cout << i << "------------" << endl;
-			arr[i].number = number;
-			cout << arr[i].number << endl;
+			//arr[i].number = number;
+			//cout << arr[i].number << endl;
 			arr[i].name = name;
 			cout << arr[i].name << endl;
 			arr[i].type = type;
@@ -102,7 +102,10 @@ int main(int argc, char *argv[])
 				//cout << convert("cheese") << endl;
 				//cout << numbervalue(" Cheese") << endl;
 				//cout << numbervalue("cheese") << endl;
-				
+				//for(int i = 0; i < size; i++)
+				//{
+					//cout << arr[i].name << endl;
+				//}
 				
                 break;
             case 2:
