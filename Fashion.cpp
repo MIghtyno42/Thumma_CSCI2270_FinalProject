@@ -26,10 +26,11 @@ Fashion::~Fashion(){
 void Fashion::printInventory(item *foundItems, int sizeStock)
 {
 	for(int i = 0; i < sizeStock; i++){
-		cout<<"Name:"<<foundItems[i].name<<endl;
-		cout<<"Type:" <<foundItems[i].type<<endl;
-		cout<<"Color:" <<foundItems[i].color<<endl;
-		cout<<"Style:" <<foundItems[i].style<<endl;
+		cout<<"NAME: "<<foundItems[i].name<<endl;
+		cout<<"-Type: "<<foundItems[i].type<<endl;
+		cout<<"-Color: "<<foundItems[i].color<<endl;
+		cout<<"-Style: "<<foundItems[i].style<<endl;
+		cout<< "\n" << endl;
 	}
 }
 
@@ -37,10 +38,11 @@ void Fashion::printInventory(item *foundItems, int sizeStock)
 void Fashion::searchName(item *searchItems, int sizeStock, int searchName){
 	for(int i = 0; i < sizeStock; i++){
 		if(searchItems[i].nameBarCode == searchName){
-			cout<<"Name:"<<searchItems[i].name<<endl;
-			cout<<"Type:" <<searchItems[i].type<<endl;
-			cout<<"Color:" <<searchItems[i].color<<endl;
-			cout<<"Style:" <<searchItems[i].style<<endl;
+			cout<<"NAME: "<<searchItems[i].name<<endl;
+            cout<<"-Type: "<<searchItems[i].type<<endl;
+            cout<<"-Color: "<<searchItems[i].color<<endl;
+            cout<<"-Style: "<<searchItems[i].style<<endl;
+            cout<< "\n" << endl;
 		}
 	}
 
@@ -93,11 +95,11 @@ void Fashion::filterType(item *searchItems, int sizeStock, int filterType){
 		}
 	}
 	item *afterType = new item[counter+1];
-	/*for(int j = 0; j < counter+1; j++){
-	    cout<<"second for loop"<<endl;
-        afterType[j].nameBarCode = -1;
-    }*/
-    int s = 0;
+	//for(int j = 0; j < counter+1; j++){
+	    //cout<<"second for loop"<<endl;
+        //afterType[j].nameBarCode = -1;
+    //}
+    int s = 0;  //incrementer for new array
 	for(int i = 0; i < sizeStock; i++){
 	   // cout<<"third for loop"<<endl;
 		if(searchItems[i].typeBarCode == filterType){
@@ -114,6 +116,10 @@ void Fashion::filterType(item *searchItems, int sizeStock, int filterType){
 			cout<<s<<endl;
 		}
 		//testingPrint(afterType, s);
+		//if (afterType[0].nameBarCode == -1)
+		//{
+			//cout << "nothing matching current filters" << endl;
+		//}
 	}
 	int input;
 	while(input != 4){
@@ -131,6 +137,8 @@ void Fashion::filterType(item *searchItems, int sizeStock, int filterType){
         switch(input){
         case 1:
         {
+			cout << "Options for color: black, white, blue, red, pink, purple, grey, orange, and yellow" << endl;
+			cout << "Your selection:" << endl;
             getline(cin, searchItem);
             searchItemNumber = barCode(searchItem);
             filterColor(afterType, s, searchItemNumber);
@@ -138,6 +146,8 @@ void Fashion::filterType(item *searchItems, int sizeStock, int filterType){
         }
         case 2:
         {
+			cout << "Options for style: modern, boho, classy, basic, and retro" << endl;
+			cout << "Your selection:" << endl;
             getline(cin, searchItem);
             searchItemNumber = barCode(searchItem);
             filterStyle(afterType, s, searchItemNumber);
@@ -204,6 +214,8 @@ void Fashion::filterStyle(item *searchItems, int sizeStock, int filterStyle){
         switch(input){
         case 1:
         {
+			cout << "Options for type: shirt, dress, skirt, pants, and shoe" << endl;
+			cout << "Your selection:" << endl;
             getline(cin, searchItem);
             searchItemNumber = barCode(searchItem);
             filterType(afterStyle, s, searchItemNumber);
@@ -211,6 +223,8 @@ void Fashion::filterStyle(item *searchItems, int sizeStock, int filterStyle){
         }
         case 2:
         {
+			cout << "Options for color: black, white, blue, red, pink, purple, grey, orange, and yellow" << endl;
+			cout << "Your selection:" << endl;
             getline(cin, searchItem);
             searchItemNumber = barCode(searchItem);
             filterColor(afterStyle, s, searchItemNumber);
@@ -275,6 +289,8 @@ void Fashion::filterColor(item *searchItems, int sizeStock, int filterColor){
         switch(input){
         case 1:
         {
+			cout << "Options for type: shirt, dress, skirt, pants, and shoe" << endl;
+			cout << "Your selection:" << endl;
             getline(cin, searchItem);
             searchItemNumber = barCode(searchItem);
             filterType(afterColor, s, searchItemNumber);
@@ -282,6 +298,8 @@ void Fashion::filterColor(item *searchItems, int sizeStock, int filterColor){
         }
         case 2:
         {
+			cout << "Options for style: modern, boho, classy, basic, and retro" << endl;
+			cout << "Your selection:" << endl;
             getline(cin, searchItem);
             searchItemNumber = barCode(searchItem);
             filterStyle(afterColor, s, searchItemNumber);
@@ -304,10 +322,11 @@ void Fashion::filterColor(item *searchItems, int sizeStock, int filterColor){
 void Fashion::testingPrint(item *filterItems, int filterItemsSize){
     for(int i = 0; i < filterItemsSize; i++){
         //if(filterItems[i].nameBarCode != -1){
-            cout<<filterItems[i].name<<endl;
-            cout<<filterItems[i].type<<endl;
-            cout<<filterItems[i].color<<endl;
-            cout<<filterItems[i].style<<endl;
+            cout<<"NAME: "<<filterItems[i].name<<endl;
+            cout<<"-Type: "<<filterItems[i].type<<endl;
+            cout<<"-Color: "<<filterItems[i].color<<endl;
+            cout<<"-Style: "<<filterItems[i].style<<endl;
+            cout<< "\n" << endl;
         //}
     }
 }
