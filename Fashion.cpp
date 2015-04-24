@@ -306,6 +306,8 @@ void Fashion::testingPrint(item *filterItems, int filterItemsSize){
         //if(filterItems[i].nameBarCode != -1){
             cout<<filterItems[i].name<<endl;
             cout<<filterItems[i].type<<endl;
+            cout<<filterItems[i].color<<endl;
+            cout<<filterItems[i].style<<endl;
         //}
     }
 }
