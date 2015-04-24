@@ -137,21 +137,31 @@ void Fashion::filterType(item *searchItems, int sizeStock, int filterType){
         switch(input){
         case 1:
         {
+			if (colorDone == false){
 			cout << "Options for color: black, white, blue, red, pink, purple, grey, orange, and yellow" << endl;
 			cout << "Your selection:" << endl;
             getline(cin, searchItem);
             searchItemNumber = barCode(searchItem);
             filterColor(afterType, s, searchItemNumber);
+            colorDone = true;
             break;
+			}
+			else 
+			cout << "You already have filtered by color" << endl;
         }
         case 2:
         {
+			if (styleDone == false){
 			cout << "Options for style: modern, boho, classy, basic, and retro" << endl;
 			cout << "Your selection:" << endl;
             getline(cin, searchItem);
             searchItemNumber = barCode(searchItem);
             filterStyle(afterType, s, searchItemNumber);
+            styleDone = true;
             break;
+			}
+			else 
+			cout << "You already have filtered by style" << endl;
         }
         case 3:
             testingPrint(afterType, s);
@@ -214,21 +224,31 @@ void Fashion::filterStyle(item *searchItems, int sizeStock, int filterStyle){
         switch(input){
         case 1:
         {
+            if(typeDone == false){
 			cout << "Options for type: shirt, dress, skirt, pants, and shoe" << endl;
 			cout << "Your selection:" << endl;
             getline(cin, searchItem);
             searchItemNumber = barCode(searchItem);
             filterType(afterStyle, s, searchItemNumber);
+            typeDone = true;
             break;
+			}
+			else 
+			cout << "You already have filtered by type" << endl;
         }
         case 2:
         {
+            if (colorDone == false){
 			cout << "Options for color: black, white, blue, red, pink, purple, grey, orange, and yellow" << endl;
 			cout << "Your selection:" << endl;
             getline(cin, searchItem);
             searchItemNumber = barCode(searchItem);
             filterColor(afterStyle, s, searchItemNumber);
+            colorDone = true;
             break;
+			}
+			else 
+			cout << "You already have filtered by color" << endl;
         }
         case 3:
             testingPrint(afterStyle, s);
@@ -289,21 +309,31 @@ void Fashion::filterColor(item *searchItems, int sizeStock, int filterColor){
         switch(input){
         case 1:
         {
+			if(typeDone == false){
 			cout << "Options for type: shirt, dress, skirt, pants, and shoe" << endl;
 			cout << "Your selection:" << endl;
             getline(cin, searchItem);
             searchItemNumber = barCode(searchItem);
             filterType(afterColor, s, searchItemNumber);
+            typeDone = true;
             break;
+			}
+			else 
+			cout << "You already have filtered by type" << endl;
         }
         case 2:
         {
+            if (styleDone == false){
 			cout << "Options for style: modern, boho, classy, basic, and retro" << endl;
 			cout << "Your selection:" << endl;
             getline(cin, searchItem);
             searchItemNumber = barCode(searchItem);
             filterStyle(afterColor, s, searchItemNumber);
+            styleDone = true;
             break;
+			}
+			else 
+			cout << "You already have filtered by style" << endl;
         }
         case 3:
             testingPrint(afterColor, s);

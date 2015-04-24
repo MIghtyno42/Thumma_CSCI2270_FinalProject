@@ -44,6 +44,9 @@ class Fashion
     private:
         item *stock;
         int sizeStock;
+        bool typeDone = false;
+        bool colorDone = false;
+        bool styleDone = false;
 
 
 };
