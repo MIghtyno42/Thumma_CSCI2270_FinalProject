@@ -113,6 +113,7 @@ void Fashion::filterType(item *searchItems, int sizeStock, int filterType){
 			s++;
 			cout<<s<<endl;
 		}
+		testingPrint(afterType, s);
 	}
 	int input;
 	while(input != 4){
@@ -120,7 +121,7 @@ void Fashion::filterType(item *searchItems, int sizeStock, int filterType){
         cout<<"1. Add a color filter?"<<endl;
         cout<<"2. Add a style filter?"<<endl;
         cout<<"3. Print the filtered inventory?"<<endl;
-        cout<<"3. Exit?"<<endl;
+        cout<<"4. Exit?"<<endl;
 
         cin >> input;
         cin.ignore(10000,'\n');
@@ -192,7 +193,7 @@ void Fashion::filterStyle(item *searchItems, int sizeStock, int filterStyle){
         cout<<"1. Add a type filter?"<<endl;
         cout<<"2. Add a color filter?"<<endl;
         cout<<"3. Print the filtered inventory?"<<endl;
-        cout<<"3. Exit?"<<endl;
+        cout<<"4. Exit?"<<endl;
 
         cin >> input;
         cin.ignore(10000,'\n');
@@ -264,7 +265,7 @@ void Fashion::filterColor(item *searchItems, int sizeStock, int filterColor){
         cout<<"1. Add a type filter?"<<endl;
         cout<<"2. Add a style filter?"<<endl;
         cout<<"3. Print the filtered inventory?"<<endl;
-        cout<<"3. Exit?"<<endl;
+        cout<<"4. Exit?"<<endl;
 
         cin >> input;
         cin.ignore(10000,'\n');

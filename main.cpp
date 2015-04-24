@@ -110,17 +110,24 @@ int main(int argc, char *argv[]){
 				string searchItem;
 				getline(cin, searchItem);
 				int searchItemNumber = barCode(searchItem);
-				if(searchItemNumber == nameBarCode){
-                    inventory.searchName(stock, stockSize, searchItemNumber);
-				}
-				else if(searchItemNumber == typeBarCode){
-                    inventory.filterType(stock, stockSize, searchItemNumber);
-				}
-				else if(searchItemNumber == colorBarCode){
-                    inventory.filterColor(stock, stockSize, searchItemNumber);
-				}
-				else if(searchItemNumber == styleBarCode){
-                    inventory.filterStyle(stock, stockSize, searchItemNumber);
+				cout<<"searching"<<endl;
+				for(int a = 0; a < stockSize; a++){
+                    if(searchItemNumber == stock[a].nameBarCode){
+                        cout<<"name"<<endl;
+                        inventory.searchName(stock, stockSize, searchItemNumber);
+                    }
+                    else if(searchItemNumber == stock[a].typeBarCode){
+                        cout<<"type"<<endl;
+                        inventory.filterType(stock, stockSize, searchItemNumber);
+                    }
+                    else if(searchItemNumber == stock[a].colorBarCode){
+                        cout<<"color"<<endl;
+                        inventory.filterColor(stock, stockSize, searchItemNumber);
+                    }
+                    else if(searchItemNumber == stock[a].styleBarCode){
+                        cout<<"style"<<endl;
+                        inventory.filterStyle(stock, stockSize, searchItemNumber);
+                    }
 				}
                 break;
             }
