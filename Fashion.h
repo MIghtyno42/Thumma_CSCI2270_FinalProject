@@ -37,7 +37,7 @@ class Fashion
         void searchType(item *searchItems, int sizeStock, int searchType);
         void searchStyle(item *searchItems, int sizeStock, int searchStyle);
         void filterType(item *searchItems, int sizeStock, int filterType);
-        void testingPrint(item *filterItems);
+        void testingPrint(item *filterItems, int filterItemsSize);
     protected:
     private:
         item *stock;
