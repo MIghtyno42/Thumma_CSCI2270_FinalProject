@@ -202,9 +202,9 @@ void Fashion::filterStyle(item *searchItems, int sizeStock, int filterStyle){
             filterType(afterStyle, s, searchItemNumber);
             break;
         case 2:
-            getlin(cin, searchItem);
+            getline(cin, searchItem);
             int searchItemNumber = barCode(searchItem);
-            filterColor(afterStyle, s);
+            filterColor(afterStyle, s, searchItemNumber);
             break;
         case 3:
             testingPrint(afterStyle, s);
@@ -250,7 +250,7 @@ void Fashion::filterColor(item *searchItems, int sizeStock, int filterColor){
 			cout<<s<<endl;
 		}
 	}
-		int input;
+    int input;
 	while(input != 4){
         cout<<"What do you want to do?"<<endl;
         cout<<"1. Add a type filter?"<<endl;
@@ -258,16 +258,20 @@ void Fashion::filterColor(item *searchItems, int sizeStock, int filterColor){
         cout<<"3. Print the filtered inventory?"<<endl;
         cout<<"3. Exit?"<<endl;
 
-        cin >> command;
+        cin >> input;
         cin.ignore(10000,'\n');
         string searchItem;
 
         switch(input){
         case 1:
-            filterType(afterColor, s, );
+            getline(cin, searchItem);
+            int searchItemNumber = barCode(searchItem);
+            filterType(afterColor, s, searchItemNumber);
             break;
         case 2:
-            filterStyle(afterColor, s);
+            getline(cin, searchItem);
+            int searchItemNumber = barCode(searchItem);
+            filterStyle(afterColor, s, searchItemNumber);
             break;
         case 3:
             testingPrint(afterColor, s);
