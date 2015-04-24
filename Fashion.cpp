@@ -113,7 +113,7 @@ void Fashion::filterType(item *searchItems, int sizeStock, int filterType){
 			s++;
 			cout<<s<<endl;
 		}
-		testingPrint(afterType, s);
+		//testingPrint(afterType, s);
 	}
 	int input;
 	while(input != 4){
@@ -149,6 +149,7 @@ void Fashion::filterType(item *searchItems, int sizeStock, int filterType){
         case 4:
             cout<<"Goodbye!"<<endl;
             break;
+            return;
         default:
             cout<<"Not a valid menu selection"<<endl;
             break;
