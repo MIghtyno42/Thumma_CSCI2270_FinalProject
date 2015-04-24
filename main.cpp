@@ -72,7 +72,7 @@ int main(int argc, char *argv[]){
             i++;
         }
     }
-    for(int k = 0; k < stockSize; k++){
+    /*for(int k = 0; k < stockSize; k++){
         cout<<"NAME "<<stock[k].name<<endl;
         cout<<"NAME BAR CODE "<<stock[k].nameBarCode<<endl;
         cout<<"TYPE "<<stock[k].type<<endl;
@@ -81,7 +81,7 @@ int main(int argc, char *argv[]){
         cout<<"COLOR BAR CODE "<<stock[k].colorBarCode<<endl;
         cout<<"STYLE "<<stock[k].style<<endl;
         cout<<"STYLE BAR CODE "<<stock[k].styleBarCode<<endl;
-    }
+    }*/
 
 	int command;
 	Fashion inventory;
@@ -106,13 +106,13 @@ int main(int argc, char *argv[]){
 				inventory.printInventory(stock, stockSize);
                 break;
             case 2:
-				{
+            {
 				string searchItem;
 				getline(cin, searchItem);
 				int searchItemNumber = barCode(searchItem);
 				inventory.filterType(stock, stockSize, searchItemNumber);
-				}
                 break;
+            }
             case 3:
 
                 break;
