@@ -109,23 +109,27 @@ int main(int argc, char *argv[]){
             {
 				string searchItem;
 				getline(cin, searchItem);
-				int searchItemNumber = barCode(searchItem);
+				int searchItemNumber;
 				cout<<"searching"<<endl;
 				for(int a = 0; a < stockSize; a++){
-                    if(searchItemNumber == stock[a].nameBarCode){
+                    if(searchItem == stock[a].name){
                         cout<<"name"<<endl;
+                        searchItemNumber = barCode(searchItem);
                         inventory.searchName(stock, stockSize, searchItemNumber);
                     }
-                    else if(searchItemNumber == stock[a].typeBarCode){
+                    else if(searchItem == stock[a].type){
                         cout<<"type"<<endl;
+                        searchItemNumber = barCode(searchItem);
                         inventory.filterType(stock, stockSize, searchItemNumber);
                     }
-                    else if(searchItemNumber == stock[a].colorBarCode){
+                    else if(searchItem == stock[a].color){
                         cout<<"color"<<endl;
+                        searchItemNumber = barCode(searchItem);
                         inventory.filterColor(stock, stockSize, searchItemNumber);
                     }
-                    else if(searchItemNumber == stock[a].styleBarCode){
+                    else if(searchItem == stock[a].style){
                         cout<<"style"<<endl;
+                        searchItemNumber = barCode(searchItem);
                         inventory.filterStyle(stock, stockSize, searchItemNumber);
                     }
 				}
