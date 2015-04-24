@@ -87,21 +87,21 @@ void Fashion::searchStyle(item *searchItems, int sizeStock, int searchStyle){
 void Fashion::filterType(item *searchItems, int sizeStock, int filterType){
 	int counter = 0;
 	for(int i = 0; i < sizeStock; i++){
-        cout<<"first for loop"<<endl;
+        //cout<<"first for loop"<<endl;
 		if(searchItems[i].typeBarCode == filterType){
 			counter++;
 		}
 	}
 	item *afterType = new item[counter+1];
-	for(int j = 0; j < counter+1; j++){
+	/*for(int j = 0; j < counter+1; j++){
 	    cout<<"second for loop"<<endl;
         afterType[j].nameBarCode = -1;
-    }
+    }*/
     int s = 0;
 	for(int i = 0; i < sizeStock; i++){
-	    cout<<"third for loop"<<endl;
+	   // cout<<"third for loop"<<endl;
 		if(searchItems[i].typeBarCode == filterType){
-		    cout<<"if conditional statement"<<endl;
+		   // cout<<"if conditional statement"<<endl;
 			afterType[s].name = searchItems[i].name;
 			afterType[s].nameBarCode = searchItems[i].nameBarCode;
 			afterType[s].type = searchItems[i].type;
@@ -111,17 +111,18 @@ void Fashion::filterType(item *searchItems, int sizeStock, int filterType){
 			afterType[s].style = searchItems[i].style;
 			afterType[s].styleBarCode = searchItems[i].styleBarCode;
 			s++;
+			cout<<s<<endl;
 		}
 	}
-	testingPrint(afterType);
+	testingPrint(afterType, s);
 }
 
-void Fashion::testingPrint(item *filterItems){
-    for(int i = 0; i < 30; i++){
-        if(filterItems[i].nameBarCode != -1){
+void Fashion::testingPrint(item *filterItems, int filterItemsSize){
+    for(int i = 0; i < filterItemsSize; i++){
+        //if(filterItems[i].nameBarCode != -1){
             cout<<filterItems[i].name<<endl;
             cout<<filterItems[i].type<<endl;
-        }
+        //}
     }
 }
 
