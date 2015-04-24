@@ -126,12 +126,12 @@ void Fashion::filterType(item *searchItems, int sizeStock, int filterType){
         cin.ignore(10000,'\n');
 
         string searchItem;
-
+        int searchItemNumber;
         switch(input){
         case 1:
         {
             getline(cin, searchItem);
-            int searchItemNumber = barCode(searchItem);
+            searchItemNumber = barCode(searchItem);
             filterColor(afterType, s, searchItemNumber);
             break;
         }
@@ -174,16 +174,16 @@ void Fashion::filterStyle(item *searchItems, int sizeStock, int filterStyle){
 	   // cout<<"third for loop"<<endl;
 		if(searchItems[i].styleBarCode == filterStyle){
 		   // cout<<"if conditional statement"<<endl;
-			afterType[s].name = searchItems[i].name;
-			afterType[s].nameBarCode = searchItems[i].nameBarCode;
-			afterType[s].type = searchItems[i].type;
-			afterType[s].typeBarCode = searchItems[i].typeBarCode;
-			afterType[s].color = searchItems[i].color;
-			afterType[s].colorBarCode = searchItems[i].colorBarCode;
-			afterType[s].style = searchItems[i].style;
-			afterType[s].styleBarCode = searchItems[i].styleBarCode;
+			afterStyle[s].name = searchItems[i].name;
+			afterStyle[s].nameBarCode = searchItems[i].nameBarCode;
+			afterStyle[s].type = searchItems[i].type;
+			afterStyle[s].typeBarCode = searchItems[i].typeBarCode;
+			afterStyle[s].color = searchItems[i].color;
+			afterStyle[s].colorBarCode = searchItems[i].colorBarCode;
+			afterStyle[s].style = searchItems[i].style;
+			afterStyle[s].styleBarCode = searchItems[i].styleBarCode;
 			s++;
-			cout<<s<<endl;
+			//cout<<s<<endl;
 		}
 	}
     int input;
@@ -198,12 +198,12 @@ void Fashion::filterStyle(item *searchItems, int sizeStock, int filterStyle){
         cin.ignore(10000,'\n');
 
         string searchItem;
-
+        int searchItemNumber;
         switch(input){
         case 1:
         {
             getline(cin, searchItem);
-            int searchItemNumber = barCode(searchItem);
+            searchItemNumber = barCode(searchItem);
             filterType(afterStyle, s, searchItemNumber);
             break;
         }
@@ -246,16 +246,16 @@ void Fashion::filterColor(item *searchItems, int sizeStock, int filterColor){
 	   // cout<<"third for loop"<<endl;
 		if(searchItems[i].colorBarCode == filterColor){
 		   // cout<<"if conditional statement"<<endl;
-			afterType[s].name = searchItems[i].name;
-			afterType[s].nameBarCode = searchItems[i].nameBarCode;
-			afterType[s].type = searchItems[i].type;
-			afterType[s].typeBarCode = searchItems[i].typeBarCode;
-			afterType[s].color = searchItems[i].color;
-			afterType[s].colorBarCode = searchItems[i].colorBarCode;
-			afterType[s].style = searchItems[i].style;
-			afterType[s].styleBarCode = searchItems[i].styleBarCode;
+			afterColor[s].name = searchItems[i].name;
+			afterColor[s].nameBarCode = searchItems[i].nameBarCode;
+			afterColor[s].type = searchItems[i].type;
+			afterColor[s].typeBarCode = searchItems[i].typeBarCode;
+			afterColor[s].color = searchItems[i].color;
+			afterColor[s].colorBarCode = searchItems[i].colorBarCode;
+			afterColor[s].style = searchItems[i].style;
+			afterColor[s].styleBarCode = searchItems[i].styleBarCode;
 			s++;
-			cout<<s<<endl;
+			//cout<<s<<endl;
 		}
 	}
     int input;
@@ -269,12 +269,12 @@ void Fashion::filterColor(item *searchItems, int sizeStock, int filterColor){
         cin >> input;
         cin.ignore(10000,'\n');
         string searchItem;
-
+        int searchItemNumber;
         switch(input){
         case 1:
         {
             getline(cin, searchItem);
-            int searchItemNumber = barCode(searchItem);
+            searchItemNumber = barCode(searchItem);
             filterType(afterColor, s, searchItemNumber);
             break;
         }
