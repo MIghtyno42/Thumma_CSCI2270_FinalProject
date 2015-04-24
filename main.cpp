@@ -181,7 +181,7 @@ int main(int argc, char *argv[]){
 				cout<<"Searching color '" << searchItem << "'......." <<endl;				
 				bool counter = false;
 				for(int a = 0; a < stockSize; a++){
-                    if(searchItem == stock[a].type){
+                    if(searchItem == stock[a].color){
 							searchItemNumber = barCode(searchItem);
 							inventory.filterColor(stock, stockSize, searchItemNumber);
 							counter = true;
@@ -203,7 +203,7 @@ int main(int argc, char *argv[]){
 				cout<<"Searching style '" << searchItem << "'......." <<endl;
 				bool counter = false;
 				for(int a = 0; a < stockSize; a++){
-                    if(searchItem == stock[a].type){
+                    if(searchItem == stock[a].style){
 							searchItemNumber = barCode(searchItem);
 							inventory.filterStyle(stock, stockSize, searchItemNumber);
 							counter = true;

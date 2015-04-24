@@ -252,6 +252,7 @@ void Fashion::filterStyle(item *searchItems, int sizeStock, int filterStyle){
         }
         case 3:
             testingPrint(afterStyle, s);
+            return;
             break;
         case 4:
             cout<<"Goodbye!"<<endl;
