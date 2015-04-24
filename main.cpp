@@ -110,7 +110,18 @@ int main(int argc, char *argv[]){
 				string searchItem;
 				getline(cin, searchItem);
 				int searchItemNumber = barCode(searchItem);
-				inventory.filterType(stock, stockSize, searchItemNumber);
+				if(searchItemNumber == nameBarCode){
+                    inventory.searchName(stock, stockSize, searchItemNumber);
+				}
+				else if(searchItemNumber == typeBarCode){
+                    inventory.filterType(stock, stockSize, searchItemNumber);
+				}
+				else if(searchItemNumber == colorBarCode){
+                    inventory.filterColor(stock, stockSize, searchItemNumber);
+				}
+				else if(searchItemNumber == styleBarCode){
+                    inventory.filterStyle(stock, stockSize, searchItemNumber);
+				}
                 break;
             }
             case 3:

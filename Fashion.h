@@ -38,6 +38,9 @@ class Fashion
         void searchStyle(item *searchItems, int sizeStock, int searchStyle);
         void filterType(item *searchItems, int sizeStock, int filterType);
         void testingPrint(item *filterItems, int filterItemsSize);
+        void filterStyle(item *searchItems, int sizeStock, int filterStyle);
+        void filterColor(item *searchItems, int sizeStock, int filterColor);
+        int barCode(string word);
     protected:
     private:
         item *stock;
