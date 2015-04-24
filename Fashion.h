@@ -40,7 +40,7 @@ class Fashion
         void testingPrint(item *filterItems, int filterItemsSize);
         void filterStyle(item *searchItems, int sizeStock, int filterStyle);
         void filterColor(item *searchItems, int sizeStock, int filterColor);
-        int barCode(string word);
+        int barCode(std::string word);
     protected:
     private:
         item *stock;

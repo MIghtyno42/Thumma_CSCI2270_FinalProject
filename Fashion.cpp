@@ -129,15 +129,19 @@ void Fashion::filterType(item *searchItems, int sizeStock, int filterType){
 
         switch(input){
         case 1:
+        {
             getline(cin, searchItem);
             int searchItemNumber = barCode(searchItem);
             filterColor(afterType, s, searchItemNumber);
             break;
+        }
         case 2:
+        {
             getline(cin, searchItem);
-            int searchItemNumber = barCode(searchItem);
+            searchItemNumber = barCode(searchItem);
             filterStyle(afterType, s, searchItemNumber);
             break;
+        }
         case 3:
             testingPrint(afterType, s);
             break;
@@ -197,15 +201,19 @@ void Fashion::filterStyle(item *searchItems, int sizeStock, int filterStyle){
 
         switch(input){
         case 1:
+        {
             getline(cin, searchItem);
             int searchItemNumber = barCode(searchItem);
             filterType(afterStyle, s, searchItemNumber);
             break;
+        }
         case 2:
+        {
             getline(cin, searchItem);
-            int searchItemNumber = barCode(searchItem);
+            searchItemNumber = barCode(searchItem);
             filterColor(afterStyle, s, searchItemNumber);
             break;
+        }
         case 3:
             testingPrint(afterStyle, s);
             break;
@@ -264,15 +272,19 @@ void Fashion::filterColor(item *searchItems, int sizeStock, int filterColor){
 
         switch(input){
         case 1:
+        {
             getline(cin, searchItem);
             int searchItemNumber = barCode(searchItem);
             filterType(afterColor, s, searchItemNumber);
             break;
+        }
         case 2:
+        {
             getline(cin, searchItem);
-            int searchItemNumber = barCode(searchItem);
+            searchItemNumber = barCode(searchItem);
             filterStyle(afterColor, s, searchItemNumber);
             break;
+        }
         case 3:
             testingPrint(afterColor, s);
             break;
