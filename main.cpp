@@ -115,12 +115,12 @@ int main(int argc, char *argv[]){
 				cout<<"Searching name '" << searchItem << "'......." <<endl;
 				bool counter = false;
 				for(int a = 0; a < stockSize; a++){
-                    if(searchItem == stock[a].type){
+                    if(searchItem == stock[a].name){
 							searchItemNumber = barCode(searchItem);
 							inventory.searchName(stock, stockSize, searchItemNumber);
 							counter = true;
 					}
-				}	
+				}
 				if (counter == false)
 				{
 					cout << "No such item" << endl;
@@ -164,7 +164,7 @@ int main(int argc, char *argv[]){
 							inventory.filterType(stock, stockSize, searchItemNumber);
 							counter = true;
 					}
-				}	
+				}
 				if (counter == false)
 				{
 					cout << "No such type" << endl;
@@ -178,7 +178,7 @@ int main(int argc, char *argv[]){
 				string searchItem;
 				getline(cin, searchItem);
 				int searchItemNumber;
-				cout<<"Searching color '" << searchItem << "'......." <<endl;				
+				cout<<"Searching color '" << searchItem << "'......." <<endl;
 				bool counter = false;
 				for(int a = 0; a < stockSize; a++){
                     if(searchItem == stock[a].color){
@@ -186,7 +186,7 @@ int main(int argc, char *argv[]){
 							inventory.filterColor(stock, stockSize, searchItemNumber);
 							counter = true;
 					}
-				}	
+				}
 				if (counter == false)
 				{
 					cout << "No such color" << endl;
@@ -208,7 +208,7 @@ int main(int argc, char *argv[]){
 							inventory.filterStyle(stock, stockSize, searchItemNumber);
 							counter = true;
 					}
-				}	
+				}
 				if (counter == false)
 				{
 					cout << "No such style" << endl;
