@@ -81,7 +81,7 @@ int main(int argc, char *argv[]){
     int start = 0;
     item *new_arr = new item [stockSize];
 
-    while(command != 7){
+    while(command != 8){
         cout<<"======Main Menu======"<<endl;
         cout<<"1. Print the inventory "<<endl;
         cout<<"2. Start Search by Name"<<endl;
@@ -89,7 +89,8 @@ int main(int argc, char *argv[]){
         cout<<"4. Start Search by Color"<<endl;
         cout<<"5. Start Search by Style"<<endl;
         cout<<"6. Sort Inventory Alphabetically"<<endl;
-        cout<<"7. Quit "<<endl;
+        cout<<"7. Add Items to Shopping Cart" << endl;
+        cout<<"8. Quit "<<endl;
 
         cin >> command;
         cin.ignore(10000,'\n');
@@ -154,6 +155,12 @@ int main(int argc, char *argv[]){
                 break;
             }
             case 7:
+            {
+                //adding item to virtual shopping cart
+                inventory.shoppingCart(stock, stockSize);
+                break;
+            }
+            case 8:
                 //quitting the program
                 cout<<"Goodbye!"<<endl;
                 break;

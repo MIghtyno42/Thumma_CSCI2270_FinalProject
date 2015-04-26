@@ -417,16 +417,18 @@ void Fashion::shoppingCart(item *shoppingItems, int sizeStock){
 	int indexOfFound = 0;
 	string answer;
 	string itemName;
+	
 	cout << "Type item name to add to cart" << endl;
 	cin >> itemName;
-	int itemBarcode = BarCode(itemName);
+	int itemBarcode = barCode(itemName);
+	
 	for(int i = 0; i < sizeStock; i++){
-		if(searchItems[i].nameBarCode == searchName){
+		if(shoppingItems[i].nameBarCode == itemBarcode){
             foundName = true;
-			cout<<"Name: "<<searchItems[i].name<<endl;
-            cout<<"Type: "<<searchItems[i].type<<endl;
-            cout<<"Color: "<<searchItems[i].color<<endl;
-            cout<<"Style: "<<searchItems[i].style<<endl;
+			cout<<"Name: "<<shoppingItems[i].name<<endl;
+            cout<<"Type: "<<shoppingItems[i].type<<endl;
+            cout<<"Color: "<<shoppingItems[i].color<<endl;
+            cout<<"Style: "<<shoppingItems[i].style<<endl;
             cout<< "\n" << endl;
             indexOfFound = i;
 		}
@@ -437,7 +439,7 @@ void Fashion::shoppingCart(item *shoppingItems, int sizeStock){
 		cin >> answer;
 		if(answer == "Yes")
 		{
-			searchItems[indexOfFound].inCart = true;	
+			shoppingItems[indexOfFound].inCart = true;	
 		}
 		if(answer == "No")
 		{
