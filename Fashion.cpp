@@ -413,5 +413,40 @@ item *Fashion::quickSort(item *arr, int left, int right){
 
 
 void Fashion::shoppingCart(item *shoppingItems, int sizeStock){
+	bool foundName = false;
+	int indexOfFound = 0;
+	string answer;
+	string itemName;
+	cout << "Type item name to add to cart" << endl;
+	cin >> itemName;
+	int itemBarcode = BarCode(itemName);
+	for(int i = 0; i < sizeStock; i++){
+		if(searchItems[i].nameBarCode == searchName){
+            foundName = true;
+			cout<<"Name: "<<searchItems[i].name<<endl;
+            cout<<"Type: "<<searchItems[i].type<<endl;
+            cout<<"Color: "<<searchItems[i].color<<endl;
+            cout<<"Style: "<<searchItems[i].style<<endl;
+            cout<< "\n" << endl;
+            indexOfFound = i;
+		}
+	}
+	
+	if(foundName == true){
+        cout<<"Add Item to Cart? Yes or No"<<endl;
+		cin >> answer;
+		if(answer == "Yes")
+		{
+			searchItems[indexOfFound].inCart = true;	
+		}
+		if(answer == "No")
+		{
+			
+		}
+	}
+	if(foundName == false){
+        cout<<"No such item"<<endl;
+	}
+	
 	
 }

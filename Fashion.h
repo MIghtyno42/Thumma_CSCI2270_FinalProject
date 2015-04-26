@@ -40,6 +40,7 @@ class Fashion
         void filterColor(item *searchItems, int sizeStock, int filterColor);
         int barCode(std::string word);
         item *quickSort(item *arr, int left, int right);
+        void shoppingCart(item *shoppingItems, int sizeStock);
     protected:
     private:
         item *stock;
