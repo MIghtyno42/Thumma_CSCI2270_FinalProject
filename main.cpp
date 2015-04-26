@@ -91,7 +91,7 @@ int main(int argc, char *argv[]){
     int start = 0;
     item *new_arr = new item [stockSize];
 
-    while(command != 10)
+    while(command != 7)
     {
         cout<<"======Main Menu======"<<endl;
         cout<<"1. Print the inventory "<<endl;
@@ -99,7 +99,7 @@ int main(int argc, char *argv[]){
         cout<<"3. Start Search by Type "<<endl;
         cout<<"4. Start Search by Color"<<endl;
         cout<<"5. Start Search by Style"<<endl;
-        cout<<"6. Sort by Name"<<endl;
+        cout<<"6. Sort Inventory Alphabetically"<<endl;
         cout<<"7. Quit "<<endl;
 
         cin >> command;
@@ -159,20 +159,6 @@ int main(int argc, char *argv[]){
                 break;
             }
             case 7:
-                start = 0;
-                new_arr = inventory.quickSort(stock, start, (stockSize-1));
-                for(int i = 0; i < stockSize; i++){
-                    cout<<"Type ----- "<<new_arr[i].type<<" ------ "<<endl;
-                    cout<<"Name: "<<new_arr[i].name<<endl;
-                    cout<<"Color: "<<new_arr[i].color<<endl;
-                    cout<<"Style: "<<new_arr[i].style<<endl;
-                }
-                break;
-            case 8:
-                break;
-            case 9:
-                break;
-			case 10:
                 cout<<"Goodbye!"<<endl;
                 break;
             default:

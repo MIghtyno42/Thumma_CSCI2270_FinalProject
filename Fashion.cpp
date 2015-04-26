@@ -372,16 +372,16 @@ item *Fashion::quickSort(item *arr, int left, int right){
      int i = left;
      int j = right;
      string tmp;
-     string pivot = arr[(left + right) / 2].color;
+     string pivot = arr[(left + right) / 2].name;
      while(i <= j){
-          while(((arr[i].color.compare(pivot)) < 0) && (i < right))
+          while(((arr[i].name.compare(pivot)) < 0) && (i < right))
                i++;
-          while(((arr[j].color.compare(pivot)) > 0) && (j > left))
+          while(((arr[j].name.compare(pivot)) > 0) && (j > left))
                j--;
           if(i <= j){
-               tmp = arr[i].color;
-               arr[i].color = arr[j].color;
-               arr[j].color = tmp;
+               tmp = arr[i].name;
+               arr[i].name = arr[j].name;
+               arr[j].name = tmp;
                i++;
                j--;
           }
