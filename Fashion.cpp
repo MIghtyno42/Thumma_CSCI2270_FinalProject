@@ -23,9 +23,9 @@ Fashion::~Fashion(){
 
 }
 
-/*1. void printInventory(item *array, int)
- *2. This function takes in the array and prints out each part of the struct in the array which is the name, the style, the color, and style.
- *3. call this method like this: inventory.printInventory(stock,stockSize)
+/*1. Prototype: void printInventory(item *array, int)
+ *2. Description: This function takes in the array and prints out each part of the struct in the array which is the name, the style, the color, and style.
+ *3. Calling: call this method like this: inventory.printInventory(stock,stockSize)
  *4. Preconditions: the data must be read and put into the array for this funtion to print it
  *   Postconditions: there is no change to the actual data or array, this function mearly prints the data*/
 void Fashion::printInventory(item *foundItems, int sizeStock)
@@ -93,7 +93,14 @@ void Fashion::searchStyle(item *searchItems, int sizeStock, int searchStyle){
     }
 }
 
-//filtering the inventory by type
+/*1. Prototype: void filterType(item *array, int, int)
+ *2. Description: This function takes in the array and the user's input of type, it then makes a new array with all the elements which fit that type, then gives
+ *   user the option to filter by color or style which calls those functions (and makes another array with the items that have only the chosen criteria). The user
+ *   can also choose to just print their current selection (the array with all the chosen filters applied)
+ *3. Calling: call this method like this: inventory.filterType(stock,stockSize, searchItemNumber)
+ *4. Preconditions: the data must be read and put into the array for this funtion to extract values from it and put into another array. This function also needs 
+ *   user input.
+ *   Postconditions: the original array will remain unchanged but this function creates a temoraray array as well */
 void Fashion::filterType(item *searchItems, int sizeStock, int filterType){
 	typeDone = true;
 	int counter = 0;
