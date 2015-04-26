@@ -195,7 +195,7 @@ void Fashion::filterType(item *searchItems, int sizeStock, int filterType){
 }
 
 /*1. Prototype: void filterStyle(item *array, int, int)
- *2. Description: Similar to filterTYpe. This function takes in the array and the user's input of style, it then makes a new array with all the elements which fit that 
+ *2. Description: Similar to filterType. This function takes in the array and the user's input of style, it then makes a new array with all the elements which fit that 
  *   style, then gives user the option to filter by color or type which calls those functions (and makes another array with the items that have only the chosen criteria). 
  *   The user can also choose to just print their current selection (the new array with all the chosen filters applied)
  *3. Calling: call this method like this: inventory.filterStyle(stock,stockSize, searchItemNumber)
@@ -291,7 +291,14 @@ void Fashion::filterStyle(item *searchItems, int sizeStock, int filterStyle){
 	}
 }
 
-//filtering the inventory by color
+/*1. Prototype: void filterColor(item *array, int, int)
+ *2. Description: Similar to filterStyle and filterType. This function takes in the array and the user's input of color, it then makes a new array with all the elements 
+ *   which fit that color, then gives user the option to filter by style or type which calls those functions (and makes another array with the items that have only the
+ *   chosen criteria). The user can also choose to just print their current selection (the new array with all the chosen filters applied)
+ *3. Calling: call this method like this: inventory.filterColor(stock,stockSize, searchItemNumber)
+ *4. Preconditions: the data must be read and put into the array for this funtion to extract values from it and put into another array. This function also needs 
+ *   user input.
+ *   Postconditions: the original array will remain unchanged but this function creates a temporary array as well */
 void Fashion::filterColor(item *searchItems, int sizeStock, int filterColor){
     colorDone = true;
 	int counter = 0;
@@ -396,7 +403,12 @@ void Fashion::setPrint(item *filterItems, int filterItemsSize){
     }
 }
 
-//converting the items to their bar codes
+/*1. Prototype: int barCode(string)
+ *2. Description: This function takes in a string, finds the number values for each letter, adds them up, then returns that sum to give us an interger value for a 
+ *   certain string. This int is returned 
+ *3. Calling: call this method like this: inventory.barCode(searchItem)
+ *4. Preconditions: the only thing this function depends on is a string that the user provides
+ *   Postconditions: there is no change to the data but there is now a number value for the string */
 int Fashion::barCode(string word){
     int sum = 0;
     for(int i = 0 ; i < word.length(); i++){
@@ -405,7 +417,11 @@ int Fashion::barCode(string word){
     return sum;
 }
 
-//sorting the inventory by alphabetical order
+/*1. Prototype: array quickSort(item* array, int, int)
+ *2. Description: This function 
+ *3. Calling: call this method like this: inventory.quickSort(stock, left, right)
+ *4. Preconditions: the data must be read and put into the array for this function to traverse through and sort it
+ *   Postconditions:  */
 item *Fashion::quickSort(item *arr, int left, int right){
      int i = left;
      int j = right;
