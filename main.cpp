@@ -12,6 +12,7 @@
 
 using namespace std;
 
+//calculating the bar code for each of the items
 int barCode(string word){
     int sum = 0;
     for(int i = 0 ; i < word.length(); i++){
@@ -23,13 +24,11 @@ int barCode(string word){
 int main(int argc, char *argv[]){
 	ifstream data;
     string token;
-    data.open(argv[1]);  //read in argument as file
-
-
+    //reading in the file as an argument
+    data.open(argv[1]);
     int i = 0;
-    //int number;   //item number
     int stockSize = 30;
-    int nameBarCode;  //title
+    int nameBarCode;
     string name;
     int typeBarCode;
     string type;
@@ -59,7 +58,7 @@ int main(int argc, char *argv[]){
             typeBarCode = barCode(type);
             colorBarCode = barCode(color);
             styleBarCode = barCode(style);
-
+            //putting the items in the array called stock
             stock[i].name = name;
             stock[i].nameBarCode = nameBarCode;
             stock[i].type = type;
@@ -68,22 +67,13 @@ int main(int argc, char *argv[]){
             stock[i].colorBarCode = colorBarCode;
             stock[i].style = style;
             stock[i].styleBarCode = styleBarCode;
-
+            //incrementing in the array
             i++;
         }
     }
-    /*for(int k = 0; k < stockSize; k++){
-        cout<<"NAME "<<stock[k].name<<endl;
-        cout<<"NAME BAR CODE "<<stock[k].nameBarCode<<endl;
-        cout<<"TYPE "<<stock[k].type<<endl;
-        cout<<"TYPE BAR CODE "<<stock[k].typeBarCode<<endl;
-        cout<<"COLOR "<<stock[k].color<<endl;
-        cout<<"COLOR BAR CODE "<<stock[k].colorBarCode<<endl;
-        cout<<"STYLE "<<stock[k].style<<endl;
-        cout<<"STYLE BAR CODE "<<stock[k].styleBarCode<<endl;
-    }*/
-
+    //the user's input
 	int command;
+	//creating an instance of fashion inventory
 	Fashion inventory;
 
     string searchItem;
@@ -91,8 +81,7 @@ int main(int argc, char *argv[]){
     int start = 0;
     item *new_arr = new item [stockSize];
 
-    while(command != 7)
-    {
+    while(command != 7){
         cout<<"======Main Menu======"<<endl;
         cout<<"1. Print the inventory "<<endl;
         cout<<"2. Start Search by Name"<<endl;
@@ -108,10 +97,12 @@ int main(int argc, char *argv[]){
         switch(command){
 
             case 1:
+                //printing the inventory
 				inventory.printInventory(stock, stockSize);
                 break;
             case 2:
             {
+                //searching by item name
 				cout << "Please type in an item name:" << endl;
 				getline(cin, searchItem);
 				searchItemNumber = barCode(searchItem);
@@ -121,6 +112,7 @@ int main(int argc, char *argv[]){
             }
             case 3:
             {
+                //searching by type
 				cout << "Options for type: shirt, dress, skirt, pants, and shoe" << endl;
 				cout << "Your selection:" << endl;
 				getline(cin, searchItem);
@@ -131,26 +123,29 @@ int main(int argc, char *argv[]){
 			}
             case 4:
             {
-				cout << "Options for color: black, white, blue, red, pink, purple, grey, orange, and yellow" << endl;
-				cout << "Your selection:" << endl;
+                //searching by color
+				cout<<"Options for color: black, white, blue, red, pink, purple, grey, orange, and yellow"<<endl;
+				cout<<"Your selection:"<<endl;
 				getline(cin, searchItem);
 				searchItemNumber = barCode(searchItem);
-				cout<<"Searching color '" << searchItem << "'......." <<endl;
+				cout<<"Searching color '"<<searchItem <<"'......."<<endl;
 				inventory.filterColor(stock, stockSize, searchItemNumber);
                 break;
 			}
             case 5:
             {
-				cout << "Options for style: modern, boho, classy, basic, and retro" << endl;
-				cout << "Your selection:" << endl;
+                //searching by style
+				cout<<"Options for style: modern, boho, classy, basic, and retro"<<endl;
+				cout<<"Your selection:"<<endl;
 				getline(cin, searchItem);
 				searchItemNumber = barCode(searchItem);
-				cout<<"Searching style '" << searchItem << "'......." <<endl;
+				cout<<"Searching style '"<<searchItem<<"'......."<<endl;
 				inventory.filterStyle(stock, stockSize, searchItemNumber);
                 break;
               }
             case 6:
             {
+                //sorting the inventory by alphabetical order
                 start = 0;
                 new_arr = inventory.quickSort(stock, start, (stockSize-1));
                 for(int i = 0; i < stockSize; i++){
@@ -159,9 +154,11 @@ int main(int argc, char *argv[]){
                 break;
             }
             case 7:
+                //quitting the program
                 cout<<"Goodbye!"<<endl;
                 break;
             default:
+                //if the user input's an invalid menu selection
                 cout<<"Not a valid menu selection"<<endl;
                 break;
         }
