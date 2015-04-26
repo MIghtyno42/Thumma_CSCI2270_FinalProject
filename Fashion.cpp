@@ -91,7 +91,7 @@ void Fashion::searchStyle(item *searchItems, int sizeStock, int searchStyle){
 
 //filtering the inventory by type
 void Fashion::filterType(item *searchItems, int sizeStock, int filterType){
-    typeDone = true;
+	typeDone = true;
 	int counter = 0;
 	for(int i = 0; i < sizeStock; i++){
 		if(searchItems[i].typeBarCode == filterType){
