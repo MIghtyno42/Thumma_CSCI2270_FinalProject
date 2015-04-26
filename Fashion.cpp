@@ -105,7 +105,7 @@ void Fashion::searchStyle(item *searchItems, int sizeStock, int searchStyle){
  *3. Calling: call this method like this: inventory.filterType(stock,stockSize, searchItemNumber)
  *4. Preconditions: the data must be read and put into the array for this funtion to extract values from it and put into another array. This function also needs 
  *   user input.
- *   Postconditions: the original array will remain unchanged but this function creates a temoraray array as well */
+ *   Postconditions: the original array will remain unchanged but this function creates a temporary array as well */
 void Fashion::filterType(item *searchItems, int sizeStock, int filterType){
 	typeDone = true;
 	int counter = 0;
@@ -194,7 +194,14 @@ void Fashion::filterType(item *searchItems, int sizeStock, int filterType){
 	}
 }
 
-//filtering the inventory by style
+/*1. Prototype: void filterStyle(item *array, int, int)
+ *2. Description: Similar to filterTYpe. This function takes in the array and the user's input of style, it then makes a new array with all the elements which fit that 
+ *   style, then gives user the option to filter by color or type which calls those functions (and makes another array with the items that have only the chosen criteria). 
+ *   The user can also choose to just print their current selection (the new array with all the chosen filters applied)
+ *3. Calling: call this method like this: inventory.filterStyle(stock,stockSize, searchItemNumber)
+ *4. Preconditions: the data must be read and put into the array for this funtion to extract values from it and put into another array. This function also needs 
+ *   user input.
+ *   Postconditions: the original array will remain unchanged but this function creates a temporary array as well */
 void Fashion::filterStyle(item *searchItems, int sizeStock, int filterStyle){
     styleDone = true;
 	int counter = 0;
