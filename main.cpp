@@ -87,8 +87,9 @@ int main(int argc, char *argv[]){
 	Fashion inventory;
 
     string searchItem;
+    int searchItemNumber;
 
-    while(command != 6)
+    while(command != 10)
     {
         cout<<"======Main Menu======"<<endl;
         cout<<"1. Print the inventory "<<endl;
@@ -96,7 +97,11 @@ int main(int argc, char *argv[]){
         cout<<"3. Start Search by Type "<<endl;
         cout<<"4. Start Search by Color"<<endl;
         cout<<"5. Start Search by Style"<<endl;
-        cout<<"6. Quit "<<endl;
+        cout<<"6. Sort by Name"<<endl;
+        cout<<"7. Sort by Type"<<endl;
+        cout<<"8. Sort by Color"<<endl;
+        cout<<"9. Sort by Style"<<endl;
+        cout<<"10. Quit "<<endl;
 
         cin >> command;
         cin.ignore(10000,'\n');
@@ -109,113 +114,62 @@ int main(int argc, char *argv[]){
             case 2:
             {
 				cout << "Please type in an item name:" << endl;
-				string searchItem;
 				getline(cin, searchItem);
-				int searchItemNumber;
+				searchItemNumber = barCode(searchItem);
 				cout<<"Searching name '" << searchItem << "'......." <<endl;
-				bool counter = false;
-				for(int a = 0; a < stockSize; a++){
-                    if(searchItem == stock[a].name){
-							searchItemNumber = barCode(searchItem);
-							inventory.searchName(stock, stockSize, searchItemNumber);
-							counter = true;
-					}
-				}
-				if (counter == false)
-				{
-					cout << "No such item" << endl;
-				}
-				/*for(int a = 0; a < stockSize; a++){
-                    if(searchItem == stock[a].name){
-                        cout<<"name"<<endl;
-                        searchItemNumber = barCode(searchItem);
-                        inventory.searchName(stock, stockSize, searchItemNumber);
-                    }
-                    else if(searchItem == stock[a].type){
-                        cout<<"type"<<endl;
-                        searchItemNumber = barCode(searchItem);
-                        inventory.filterType(stock, stockSize, searchItemNumber);
-                    }
-                    else if(searchItem == stock[a].color){
-                        cout<<"color"<<endl;
-                        searchItemNumber = barCode(searchItem);
-                        inventory.filterColor(stock, stockSize, searchItemNumber);
-                    }
-                    else if(searchItem == stock[a].style){
-                        cout<<"style"<<endl;
-                        searchItemNumber = barCode(searchItem);
-                        inventory.filterStyle(stock, stockSize, searchItemNumber);
-                    }
-				}*/
+                inventory.searchName(stock, stockSize, searchItemNumber);
                 break;
             }
             case 3:
             {
 				cout << "Options for type: shirt, dress, skirt, pants, and shoe" << endl;
 				cout << "Your selection:" << endl;
-				string searchItem;
 				getline(cin, searchItem);
-				int searchItemNumber;
+				searchItemNumber = barCode(searchItem);
 				cout<<"Searching type '" << searchItem << "'......." <<endl;
-				bool counter = false;
-				for(int a = 0; a < stockSize; a++){
-                    if(searchItem == stock[a].type){
-							searchItemNumber = barCode(searchItem);
-							inventory.filterType(stock, stockSize, searchItemNumber);
-							counter = true;
-					}
-				}
-				if (counter == false)
-				{
-					cout << "No such type" << endl;
-				}
+				inventory.filterType(stock, stockSize, searchItemNumber);
                 break;
 			}
             case 4:
             {
 				cout << "Options for color: black, white, blue, red, pink, purple, grey, orange, and yellow" << endl;
 				cout << "Your selection:" << endl;
-				string searchItem;
 				getline(cin, searchItem);
-				int searchItemNumber;
+				searchItemNumber = barCode(searchItem);
 				cout<<"Searching color '" << searchItem << "'......." <<endl;
-				bool counter = false;
-				for(int a = 0; a < stockSize; a++){
-                    if(searchItem == stock[a].color){
-							searchItemNumber = barCode(searchItem);
-							inventory.filterColor(stock, stockSize, searchItemNumber);
-							counter = true;
-					}
-				}
-				if (counter == false)
-				{
-					cout << "No such color" << endl;
-				}
+				inventory.filterColor(stock, stockSize, searchItemNumber);
                 break;
 			}
             case 5:
             {
 				cout << "Options for style: modern, boho, classy, basic, and retro" << endl;
 				cout << "Your selection:" << endl;
-				string searchItem;
 				getline(cin, searchItem);
-				int searchItemNumber;
+				searchItemNumber = barCode(searchItem);
 				cout<<"Searching style '" << searchItem << "'......." <<endl;
-				bool counter = false;
-				for(int a = 0; a < stockSize; a++){
-                    if(searchItem == stock[a].style){
-							searchItemNumber = barCode(searchItem);
-							inventory.filterStyle(stock, stockSize, searchItemNumber);
-							counter = true;
-					}
-				}
-				if (counter == false)
-				{
-					cout << "No such style" << endl;
-				}
+				inventory.filterStyle(stock, stockSize, searchItemNumber);
                 break;
               }
-			case 6:
+            case 6:
+            {
+                int start = 0;
+                item *new_arr = new item[stockSize];
+                new_arr = inventory.quickSort(stock, start, (stockSize-1));
+                for(int i = 0; i < stockSize; i++){
+                    cout<<"Color -- "<<new_arr[i].color<<endl;
+                    cout<<"Name: "<<new_arr[i].name<<endl;
+                    cout<<"Type: "<<new_arr[i].type<<endl;
+                    cout<<"Style: "<<new_arr[i].style<<endl;
+                }
+                break;
+            }
+            case 7:
+                break;
+            case 8:
+                break;
+            case 9:
+                break;
+			case 10:
                 cout<<"Goodbye!"<<endl;
                 break;
             default:

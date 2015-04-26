@@ -40,6 +40,7 @@ class Fashion
         void filterStyle(item *searchItems, int sizeStock, int filterStyle);
         void filterColor(item *searchItems, int sizeStock, int filterColor);
         int barCode(std::string word);
+        item *quickSort(item *arr, int left, int right);
     protected:
     private:
         item *stock;
@@ -47,7 +48,6 @@ class Fashion
         bool typeDone = false;
         bool colorDone = false;
         bool styleDone = false;
-
 
 };
 
