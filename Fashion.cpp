@@ -164,7 +164,7 @@ void Fashion::filterType(item *searchItems, int sizeStock, int filterType){
                 }
             }
             case 3:
-                testingPrint(afterType, s);
+                setPrint(afterType, s);
                 break;
             case 4:
                 cout<<"Goodbye!"<<endl;
@@ -254,7 +254,7 @@ void Fashion::filterStyle(item *searchItems, int sizeStock, int filterStyle){
                 }
             }
             case 3:
-                testingPrint(afterStyle, s);
+                setPrint(afterStyle, s);
                 return;
                 break;
             case 4:
@@ -344,7 +344,7 @@ void Fashion::filterColor(item *searchItems, int sizeStock, int filterColor){
                 }
             }
             case 3:
-                testingPrint(afterColor, s);
+                setPrint(afterColor, s);
                 break;
             case 4:
                 cout<<"Goodbye!"<<endl;
