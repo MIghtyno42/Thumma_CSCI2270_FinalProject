@@ -89,7 +89,7 @@ int main(int argc, char *argv[]){
         cout<<"4. Start Search by Color"<<endl;
         cout<<"5. Start Search by Style"<<endl;
         cout<<"6. Sort Inventory Alphabetically"<<endl;
-        cout<<"7. Add Items to Shopping Cart" << endl;
+        cout<<"7. Add Item to Shopping Cart" << endl;
         cout<<"8. Quit "<<endl;
 
         cin >> command;
@@ -156,8 +156,12 @@ int main(int argc, char *argv[]){
             }
             case 7:
             {
+				string shoppingItem;
+				cout << "Type item name to add to cart" << endl;
+				getline(cin, shoppingItem);
+				int shoppingBarcode = barCode(shoppingItem);
                 //adding item to virtual shopping cart
-                inventory.shoppingCart(stock, stockSize);
+                inventory.shoppingCart(stock, stockSize, shoppingBarcode);
                 break;
             }
             case 8:

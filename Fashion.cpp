@@ -412,24 +412,19 @@ item *Fashion::quickSort(item *arr, int left, int right){
 }
 
 
-void Fashion::shoppingCart(item *shoppingItems, int sizeStock){
+void Fashion::shoppingCart(item *shoppingItems, int sizeStock, int shoppingBarcode){
 	bool foundName = false;
 	int indexOfFound = 0;
 	string answer;
-	string itemName;
-	
-	cout << "Type item name to add to cart" << endl;
-	cin >> itemName;
-	int itemBarcode = barCode(itemName);
-	
+
 	for(int i = 0; i < sizeStock; i++){
-		if(shoppingItems[i].nameBarCode == itemBarcode){
+		if(shoppingItems[i].nameBarCode == shoppingBarcode){
             foundName = true;
+            cout<< "\n" << endl;
 			cout<<"Name: "<<shoppingItems[i].name<<endl;
             cout<<"Type: "<<shoppingItems[i].type<<endl;
             cout<<"Color: "<<shoppingItems[i].color<<endl;
             cout<<"Style: "<<shoppingItems[i].style<<endl;
-            cout<< "\n" << endl;
             indexOfFound = i;
 		}
 	}
@@ -437,18 +432,25 @@ void Fashion::shoppingCart(item *shoppingItems, int sizeStock){
 	if(foundName == true){
         cout<<"Add Item to Cart? Yes or No"<<endl;
 		cin >> answer;
-		if(answer == "Yes")
+		if(answer == "Yes" || answer == "yes")
 		{
 			shoppingItems[indexOfFound].inCart = true;	
-		}
-		if(answer == "No")
-		{
-			
 		}
 	}
 	if(foundName == false){
         cout<<"No such item"<<endl;
 	}
+	
+	for(int i = 0; i < sizeStock; i++){
+		if(shoppingItems[i].inCart == true){
+            cout<< "\n" << endl;
+			cout<<"Name: "<<shoppingItems[i].name<<endl;
+            cout<<"Type: "<<shoppingItems[i].type<<endl;
+            cout<<"Color: "<<shoppingItems[i].color<<endl;
+            cout<<"Style: "<<shoppingItems[i].style<<endl;
+		}
+	}	
+	
 	
 	
 }

@@ -11,7 +11,7 @@ Woven Drawstring shirt,shirt,blue,boho
 Classic Crease Front Trousers,pants,cream,classy
 Skinny Sailor Pants,pants,blue,basic
 Satin Joggers,pants,grey,basic
-Wide Leg SLit PLeat Pants,pants,blue,boho
+Wide Leg Slit PLeat Pants,pants,blue,boho
 Heathered Flared Pants,pants,red,modern
 Floral Elephant Print Palazzo Pants,pants,yellow,boho
 Tribal Print Ankle Slit Pants,pants,blue,boho
