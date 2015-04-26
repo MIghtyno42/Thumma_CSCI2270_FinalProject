@@ -260,10 +260,28 @@ void Fashion::filterStyle(item *searchItems, int sizeStock, int filterStyle){
             case 4:
                 cout<<"Goodbye!"<<endl;
                 break;
+<<<<<<< HEAD
+			}
+			else{
+                cout << "You already have filtered by color" << endl;
+			}
+        }
+        case 3:
+            testingPrint(afterStyle, s);
+            break;
+        case 4:
+            cout<<"Goodbye!"<<endl;
+            cout<< input << endl;
+            break;
+        default:
+            cout<<"Not a valid menu selection"<<endl;
+            break;
+=======
             default:
                 cout<<"Not a valid menu selection"<<endl;
                 break;
             }
+>>>>>>> d752755c03179dc3b3bd1f05c1525542f9c41c9c
         }
 	}
 }
