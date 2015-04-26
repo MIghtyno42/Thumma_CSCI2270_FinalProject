@@ -450,7 +450,13 @@ item *Fashion::quickSort(item *arr, int left, int right){
 
 }
 
-
+/*1. Prototype: void shoppingCart(item* array, int)
+ *2. Description: This function has the user type in an item, finds the item, then makes its bool value to be true(thus putting it in a virtual "shopping cart". 
+ * 	 Then it prints out all the values in the array that have the bool value as true
+ *3. Calling: call this method like this: inventory.shoppingCart(stock, stockSize)
+ *4. Preconditions: the data must be read and put into the array for this function to traverse through and sort it, this also requires user input data
+ *   Postconditions:  After this function is run, the bool vlaues for some items in the array will change, thus the origional array will change, this function also prints 
+ *   the true bool array elements */
 void Fashion::shoppingCart(item *shoppingItems, int sizeStock){
 	bool foundName = false;
 	string answer;
