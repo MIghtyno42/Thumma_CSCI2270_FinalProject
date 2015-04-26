@@ -39,7 +39,12 @@ void Fashion::printInventory(item *foundItems, int sizeStock)
 	}
 }
 
-//searching for a specific item name
+/*1. Prototype: searchName(item *array, int, int)
+ *2. Description: This function takes in the array and what the name of item the user is searching for in the array
+ *   and traverses, finds, and prints out each part of the struct in the array (name, the style, the color, and style). So it searches the array by ".nameBarCode"
+ *3. Calling: call this method like this: inventory.searchName(stock,stockSize,searchItem)
+ *4. Preconditions: the data must be read and put into the array for this funtion to be able to traverse. This function also needs user input
+ *   Postconditions: there is no modification to the actual data or array, this function just prints the data*/
 void Fashion::searchName(item *searchItems, int sizeStock, int searchName){
     bool foundName = false;
 	for(int i = 0; i < sizeStock; i++){
