@@ -88,6 +88,8 @@ int main(int argc, char *argv[]){
 
     string searchItem;
     int searchItemNumber;
+    int start = 0;
+    item *new_arr = new item [stockSize];
 
     while(command != 10)
     {
@@ -98,10 +100,7 @@ int main(int argc, char *argv[]){
         cout<<"4. Start Search by Color"<<endl;
         cout<<"5. Start Search by Style"<<endl;
         cout<<"6. Sort by Name"<<endl;
-        cout<<"7. Sort by Type"<<endl;
-        cout<<"8. Sort by Color"<<endl;
-        cout<<"9. Sort by Style"<<endl;
-        cout<<"10. Quit "<<endl;
+        cout<<"7. Quit "<<endl;
 
         cin >> command;
         cin.ignore(10000,'\n');
@@ -152,18 +151,22 @@ int main(int argc, char *argv[]){
               }
             case 6:
             {
-                int start = 0;
-                item *new_arr = new item[stockSize];
+                start = 0;
                 new_arr = inventory.quickSort(stock, start, (stockSize-1));
                 for(int i = 0; i < stockSize; i++){
-                    cout<<"Color -- "<<new_arr[i].color<<endl;
-                    cout<<"Name: "<<new_arr[i].name<<endl;
-                    cout<<"Type: "<<new_arr[i].type<<endl;
-                    cout<<"Style: "<<new_arr[i].style<<endl;
+                    cout<<"Name -- "<<new_arr[i].name<<endl;
                 }
                 break;
             }
             case 7:
+                start = 0;
+                new_arr = inventory.quickSort(stock, start, (stockSize-1));
+                for(int i = 0; i < stockSize; i++){
+                    cout<<"Type ----- "<<new_arr[i].type<<" ------ "<<endl;
+                    cout<<"Name: "<<new_arr[i].name<<endl;
+                    cout<<"Color: "<<new_arr[i].color<<endl;
+                    cout<<"Style: "<<new_arr[i].style<<endl;
+                }
                 break;
             case 8:
                 break;
