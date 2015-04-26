@@ -12,7 +12,7 @@
 
 using namespace std;
 
-//calculating the bar code for each of the items
+//Function for calculating the bar code for each of the items (function description found in Fashion.cpp
 int barCode(string word){
     int sum = 0;
     for(int i = 0 ; i < word.length(); i++){
@@ -26,9 +26,9 @@ int main(int argc, char *argv[]){
     string token;
     //reading in the file as an argument
     data.open(argv[1]);
+    //initializing all variables
     int i = 0;
     int stockSize = 30;
-    cout << stockSize << "----------" << endl;
     int nameBarCode;
     string name;
     int typeBarCode;
@@ -38,9 +38,11 @@ int main(int argc, char *argv[]){
     int styleBarCode;
     string style;
     string contents;
-
+    
+	//creating a new array of type item which is our struct
     item *stock = new item[stockSize];
-
+    
+	//readinf in the file
     while(!data.eof()){
         //gathering the other data in the file
         std::getline(data, contents);
@@ -74,14 +76,16 @@ int main(int argc, char *argv[]){
     }
     //the user's input
 	int command;
-	//creating an instance of fashion inventory
+	//creating an instance of class, fashion inventory
 	Fashion inventory;
-
+	
+	//initializing more variables used in loop
     string searchItem;
     int searchItemNumber;
     int start = 0;
     item *new_arr = new item [stockSize];
-
+    
+	//while loop to use for menu
     while(command != 8){
         cout<<"======Main Menu======"<<endl;
         cout<<"1. Print the inventory "<<endl;
@@ -107,8 +111,10 @@ int main(int argc, char *argv[]){
                 //searching by item name
 				cout << "Please type in an item name:" << endl;
 				getline(cin, searchItem);
+				//making string into int
 				searchItemNumber = barCode(searchItem);
 				cout<<"Searching name '" << searchItem << "'......." <<endl;
+				//calling search name function 
                 inventory.searchName(stock, stockSize, searchItemNumber);
                 break;
             }
@@ -118,8 +124,10 @@ int main(int argc, char *argv[]){
 				cout << "Options for type: shirt, dress, skirt, pants, and shoe" << endl;
 				cout << "Your selection:" << endl;
 				getline(cin, searchItem);
+				//making string into int
 				searchItemNumber = barCode(searchItem);
 				cout<<"Searching type '" << searchItem << "'......." <<endl;
+				//calling filter by type function
 				inventory.filterType(stock, stockSize, searchItemNumber);
                 break;
 			}
@@ -129,8 +137,10 @@ int main(int argc, char *argv[]){
 				cout<<"Options for color: black, white, blue, red, pink, purple, grey, orange, and yellow"<<endl;
 				cout<<"Your selection:"<<endl;
 				getline(cin, searchItem);
+				//making string into int
 				searchItemNumber = barCode(searchItem);
 				cout<<"Searching color '"<<searchItem <<"'......."<<endl;
+				//calling filter by color function
 				inventory.filterColor(stock, stockSize, searchItemNumber);
                 break;
 			}
@@ -140,8 +150,10 @@ int main(int argc, char *argv[]){
 				cout<<"Options for style: modern, boho, classy, basic, and retro"<<endl;
 				cout<<"Your selection:"<<endl;
 				getline(cin, searchItem);
+				//making string into int
 				searchItemNumber = barCode(searchItem);
 				cout<<"Searching style '"<<searchItem<<"'......."<<endl;
+				//calling filter by style function
 				inventory.filterStyle(stock, stockSize, searchItemNumber);
                 break;
               }
@@ -171,6 +183,7 @@ int main(int argc, char *argv[]){
                 break;
         }
     }
+    //closing our data file
 	data.close();
     return 0;
 }
