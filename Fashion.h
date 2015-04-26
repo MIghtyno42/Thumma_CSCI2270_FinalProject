@@ -19,6 +19,7 @@ struct item{
 	int colorBarCode;
 	std::string style;
 	int styleBarCode;
+	bool inCart = false;
 
 };
 

@@ -410,3 +410,8 @@ item *Fashion::quickSort(item *arr, int left, int right){
      return arr;
 
 }
+
+
+void Fashion::shoppingCart(item *shoppingItems, int sizeStock){
+	
+}
