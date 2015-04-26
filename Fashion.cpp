@@ -23,7 +23,11 @@ Fashion::~Fashion(){
 
 }
 
-//printing the inventory
+/*1. void printInventory(item *array, int)
+ *2. This function takes in the array and prints out each part of the struct in the array which is the name, the style, the color, and style.
+ *3. call this method like this: inventory.printInventory(stock,stockSize)
+ *4. Preconditions: the data must be read and put into the array for this funtion to print it
+ *   Postconditions: there is no change to the actual data or array, this function mearly prints the data*/
 void Fashion::printInventory(item *foundItems, int sizeStock)
 {
 	for(int i = 0; i < sizeStock; i++){
@@ -412,7 +416,7 @@ item *Fashion::quickSort(item *arr, int left, int right){
 }
 
 
-void Fashion::shoppingCart(item *shoppingItems, int sizeStock/*, int shoppingBarcode*/){
+void Fashion::shoppingCart(item *shoppingItems, int sizeStock){
 	bool foundName = false;
 	string answer;
 	int input = 0;
