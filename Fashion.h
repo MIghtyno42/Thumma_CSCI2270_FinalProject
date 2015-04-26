@@ -1,7 +1,7 @@
 //Deekshitha Thumma and Christine Samson
-//Hoenigman 2270
+//Hoenigman 2270 - Data Structures
 //Final Project
-//April 20th
+//Santhanaraman Ganesh
 
 #ifndef FASHION_H
 #define FASHION_H
@@ -11,7 +11,6 @@
 
 
 struct item{
-	//int number;
 	std::string name;
 	int nameBarCode;
 	std::string type;
@@ -20,7 +19,6 @@ struct item{
 	int colorBarCode;
 	std::string style;
 	int styleBarCode;
-	item(){};
 
 };
 
@@ -36,7 +34,7 @@ class Fashion
         void searchType(item *searchItems, int sizeStock, int searchType);
         void searchStyle(item *searchItems, int sizeStock, int searchStyle);
         void filterType(item *searchItems, int sizeStock, int filterType);
-        void testingPrint(item *filterItems, int filterItemsSize);
+        void setPrint(item *filterItems, int filterItemsSize);
         void filterStyle(item *searchItems, int sizeStock, int filterStyle);
         void filterColor(item *searchItems, int sizeStock, int filterColor);
         int barCode(std::string word);

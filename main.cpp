@@ -1,7 +1,7 @@
 //Deekshitha Thumma and Christine Samson
-//Hoenigman 2270
+//Hoenigman 2270 - Data Structures
 //Final Project
-//April 20th
+//Santhanaraman Ganesh
 
 #include <iostream>
 #include <string>

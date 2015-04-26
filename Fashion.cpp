@@ -1,7 +1,7 @@
 //Deekshitha Thumma and Christine Samson
-//Hoenigman 2270
+//Hoenigman 2270 - Data Structures
 //Final Project
-//April 20th
+//Santhanaraman Ganesh
 
 #include <iostream>
 #include <string>
@@ -23,27 +23,28 @@ Fashion::~Fashion(){
 
 }
 
-
+//printing the inventory
 void Fashion::printInventory(item *foundItems, int sizeStock)
 {
 	for(int i = 0; i < sizeStock; i++){
-		cout<<"NAME: "<<foundItems[i].name<<endl;
-		cout<<"-Type: "<<foundItems[i].type<<endl;
-		cout<<"-Color: "<<foundItems[i].color<<endl;
-		cout<<"-Style: "<<foundItems[i].style<<endl;
+		cout<<"Name: "<<foundItems[i].name<<endl;
+		cout<<"Type: "<<foundItems[i].type<<endl;
+		cout<<"Color: "<<foundItems[i].color<<endl;
+		cout<<"Style: "<<foundItems[i].style<<endl;
 		cout<< "\n" << endl;
 	}
 }
 
+//searching for a specific item name
 void Fashion::searchName(item *searchItems, int sizeStock, int searchName){
     bool foundName = false;
 	for(int i = 0; i < sizeStock; i++){
 		if(searchItems[i].nameBarCode == searchName){
             foundName = true;
-			cout<<"NAME: "<<searchItems[i].name<<endl;
-            cout<<"-Type: "<<searchItems[i].type<<endl;
-            cout<<"-Color: "<<searchItems[i].color<<endl;
-            cout<<"-Style: "<<searchItems[i].style<<endl;
+			cout<<"Name: "<<searchItems[i].name<<endl;
+            cout<<"Type: "<<searchItems[i].type<<endl;
+            cout<<"Color: "<<searchItems[i].color<<endl;
+            cout<<"Style: "<<searchItems[i].style<<endl;
             cout<< "\n" << endl;
 		}
 	}
@@ -52,6 +53,7 @@ void Fashion::searchName(item *searchItems, int sizeStock, int searchName){
 	}
 }
 
+//searching for an item color
 void Fashion::searchColor(item *searchItems, int sizeStock, int searchColor){
     for(int i = 0; i < sizeStock; i++){
         if(searchItems[i].colorBarCode == searchColor){
@@ -63,6 +65,7 @@ void Fashion::searchColor(item *searchItems, int sizeStock, int searchColor){
     }
 }
 
+//searching for an item type
 void Fashion::searchType(item *searchItems, int sizeStock, int searchType){
     for(int i = 0; i < sizeStock; i++){
         if(searchItems[i].typeBarCode == searchType){
@@ -74,6 +77,7 @@ void Fashion::searchType(item *searchItems, int sizeStock, int searchType){
     }
 }
 
+//searching for an item style
 void Fashion::searchStyle(item *searchItems, int sizeStock, int searchStyle){
     for(int i = 0; i < sizeStock; i++){
         if(searchItems[i].styleBarCode == searchStyle){
@@ -85,6 +89,7 @@ void Fashion::searchStyle(item *searchItems, int sizeStock, int searchStyle){
     }
 }
 
+//filtering the inventory by type
 void Fashion::filterType(item *searchItems, int sizeStock, int filterType){
     typeDone = true;
 	int counter = 0;
@@ -139,6 +144,7 @@ void Fashion::filterType(item *searchItems, int sizeStock, int filterType){
                 }
                 else{
                     cout << "You already have filtered by color" << endl;
+                    break;
                 }
             }
             case 2:
@@ -172,6 +178,7 @@ void Fashion::filterType(item *searchItems, int sizeStock, int filterType){
 	}
 }
 
+//filtering the inventory by style
 void Fashion::filterStyle(item *searchItems, int sizeStock, int filterStyle){
     styleDone = true;
 	int counter = 0;
@@ -227,6 +234,7 @@ void Fashion::filterStyle(item *searchItems, int sizeStock, int filterStyle){
                 }
                 else{
                     cout << "You already have filtered by type" << endl;
+                    break;
                 }
             }
             case 2:
@@ -260,6 +268,7 @@ void Fashion::filterStyle(item *searchItems, int sizeStock, int filterStyle){
 	}
 }
 
+//filtering the inventory by color
 void Fashion::filterColor(item *searchItems, int sizeStock, int filterColor){
     colorDone = true;
 	int counter = 0;
@@ -313,8 +322,10 @@ void Fashion::filterColor(item *searchItems, int sizeStock, int filterColor){
                     typeDone = true;
                 break;
                 }
-                else
-                cout << "You already have filtered by type" << endl;
+                else{
+                    cout << "You already have filtered by type" << endl;
+                    break;
+                }
             }
             case 2:
             {
@@ -329,6 +340,7 @@ void Fashion::filterColor(item *searchItems, int sizeStock, int filterColor){
                 }
                 else{
                     cout << "You already have filtered by style" << endl;
+                    break;
                 }
             }
             case 3:
@@ -345,21 +357,23 @@ void Fashion::filterColor(item *searchItems, int sizeStock, int filterColor){
 	}
 }
 
-void Fashion::testingPrint(item *filterItems, int filterItemsSize){
+//after filters have been established, prints out the list of items that fit the filter criteria
+void Fashion::setPrint(item *filterItems, int filterItemsSize){
     if(filterItemsSize == 0){
         cout<<"There are no items that match the criteria"<<endl;
     }
     else{
         for(int i = 0; i < filterItemsSize; i++){
-            cout<<"NAME: "<<filterItems[i].name<<endl;
-            cout<<"-Type: "<<filterItems[i].type<<endl;
-            cout<<"-Color: "<<filterItems[i].color<<endl;
-            cout<<"-Style: "<<filterItems[i].style<<endl;
+            cout<<"Name: "<<filterItems[i].name<<endl;
+            cout<<"Type: "<<filterItems[i].type<<endl;
+            cout<<"Color: "<<filterItems[i].color<<endl;
+            cout<<"Style: "<<filterItems[i].style<<endl;
             cout<< "\n" << endl;
         }
     }
 }
 
+//converting the items to their bar codes
 int Fashion::barCode(string word){
     int sum = 0;
     for(int i = 0 ; i < word.length(); i++){
@@ -368,6 +382,7 @@ int Fashion::barCode(string word){
     return sum;
 }
 
+//sorting the inventory by alphabetical order
 item *Fashion::quickSort(item *arr, int left, int right){
      int i = left;
      int j = right;
