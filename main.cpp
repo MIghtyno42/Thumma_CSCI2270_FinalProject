@@ -156,12 +156,13 @@ int main(int argc, char *argv[]){
             }
             case 7:
             {
-				string shoppingItem;
-				cout << "Type item name to add to cart" << endl;
-				getline(cin, shoppingItem);
-				int shoppingBarcode = barCode(shoppingItem);
+				//string shoppingItem;
+				//cout << "Type item name to add to cart" << endl;
+				//getline(cin, shoppingItem);
+				//int shoppingBarcode = barCode(shoppingItem);
                 //adding item to virtual shopping cart
-                inventory.shoppingCart(stock, stockSize, shoppingBarcode);
+                //inventory.shoppingCart(stock, stockSize, shoppingBarcode);
+                inventory.shoppingCart(stock, stockSize);
                 break;
             }
             case 8:
