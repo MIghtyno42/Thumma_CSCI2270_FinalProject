@@ -21,14 +21,14 @@ The program will come up with a menu that lists these options: print the invento
 
 
 Dependencies:
-string library (string)
-string.h
-iostream
-fstream
-g++ 11 (c++ 11 library)
-inventory file
-stdio.h
-stdlib.h
+string library (string),
+string.h,
+iostream,
+fstream,
+g++ 11 (c++ 11 library),
+inventory file,
+stdio.h,
+stdlib.h,
 cmath
 
 System Requirements:
