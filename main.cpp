@@ -11,7 +11,7 @@
 
 using namespace std;
 
-//Function for calculating the bar code for each of the items (function description found in Fashion.cpp
+//Function for calculating the bar code for each of the items (function description found in Fashion.cpp)
 int barCode(string word){
     int sum = 0;
     for(int i = 0 ; i < word.length(); i++){
