@@ -55,4 +55,13 @@ inventory.filterColor(stock,stockSize, searchItemNumber)
 Preconditions: the data must be read and put into the array for this funtion to extract values from it and put into another array. This function also needs user input.
 Postconditions: the original array will remain unchanged but this function creates a temporary array as well
 
+method:     setPrint
+Prototype: void Fashion::setPrint(item *arr, int size)
+Description: This function takes in the array and the size, and prints the items in that array. This is used
+specifically for after filtering by type, style, or color occurs. It checks if there are still items that match
+the filter criteria, and if there are, it prints all the items that match that filtered criteria.
+Calling: call this method like this: in the sub-menu, setPrint(arr, size);
+Preconditions: The array has to be filtered by type, color, or size already for this function to be called.
+Postconditions: Only the filtered array that matches the criteria will print. 
+
 
