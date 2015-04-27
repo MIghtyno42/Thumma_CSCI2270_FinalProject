@@ -2,7 +2,15 @@
 CSCI2270 Final Project
 
 Project Summary:
-This program works as an inventory for fashion companies and retail stores. What this program does is keep an inventory of the stock of clothes that a certain store has; then, the customer can search for specific attributes of a certain item of clothing they are looking for. The program will then search through the inventory to see if we have any matching items. If there are no matching items, the program will bring up similar items as suggestions.  The inventory for the store will be built using a tree structure and will have linked lists integrated into it. The different search filters that our program will be able to do are: type (examples: shirt, dress, pants), color (examples: red, blue, black), style (examples: retro, boho, modern), designers (examples: Guess, Gucci, Pink), and length (examples: short, long, medium).  The program will have the assumption hat all sizes and price ranges are accounted for. 
+This program works as an inventory for retail stores and fashion companies to display their design collection. Fashion companies and designers (Gucci, 
+Ralph Lauren, Pink, Guess etc.) can work with department stores like Macy's and Dillard's and use this program in order to build an inventory for their 
+designs and available clothing. The user will enter the piece that they desire; then, the program will then search through the inventory to see if it has any
+matching items. The inventory will be built of arrays that can filter by color (examples: red, blue, black), style (examples: retro, boho, modern), and type 
+(examples: shirt, dress, pants) or search by name. For example, one can search for a type of clothing - a dress, and then filter by category all of the 
+different choices from there. The user can choose the color, length, style and tailor the piece of clothing to what they want. If an exact match cannot be 
+found, then the program will return a myriad of designs that are similar to the one they were looking for. This program assumes that all sizes are present 
+and that the range of prices are already accounted for.
+ 
 How to Run:
 
 Dependencies:
@@ -41,5 +49,6 @@ Open issues/bugs:
     in order to restart the filter and chooses to filter by color or style first. But it says that they have already filtered by this color because of the 
     previous option. However, if we check and reset the filtering, it keeps resetting and even though they are still in the sub-menu, it lets them filter when 
     it shouldn't. 
+5.) Enhancement: How to return items that are similar to the one the user was looking for, if an item cannot be found in the inventory.
 
 
