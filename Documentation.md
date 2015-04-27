@@ -72,3 +72,16 @@ Calling: call this method like this: inventory.barCode(searchItem)
 Preconditions: the only thing this function depends on is a string that the user provides
 Postconditions: there is no change to the data but there is now a number value for the string
 
+method:   quickSort
+Prototype: array Fashion::quickSort(item* array, int, int)
+Description: This function sorts the inventory in alphabetical order. It takes in the array, the first and the
+last indices as arguments and sorts the string by using the sorting method quickSort.
+Calling: call this method like this: 
+Fashion inventory
+inventory.quickSort(stock, left, right)
+Preconditions: the data must be read and put into the array for this function to traverse through and sort it
+Postconditions: the names of the items in the inventory are now in alphabetical order, and it will be returned in a new array that is created in the main function 
+
+method:     shoppingCart
+
+
