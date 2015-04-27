@@ -83,5 +83,14 @@ Preconditions: the data must be read and put into the array for this function to
 Postconditions: the names of the items in the inventory are now in alphabetical order, and it will be returned in a new array that is created in the main function 
 
 method:     shoppingCart
+Prototype: void Fashion::shoppingCart(item* array, int)
+Description: This function has the user type in an item, finds the item, then makes its bool value to be true(thus putting it in a virtual "shopping cart".
+Then it prints out all the values in the array that have the bool value as true
+Calling: call this method like this: 
+Fashion inventory
+inventory.shoppingCart(stock, stockSize)
+Preconditions: the data must be read and put into the array for this function to traverse through and sort it, this also requires user input data
+Postconditions:  After this function is run, the bool values for some items in the array will change, thus the origional array will change, this function also 
+prints the true bool array elements 
 
 
