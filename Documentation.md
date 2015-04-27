@@ -19,3 +19,18 @@ Fashion inventory
 inventory.searchName(stock,stockSize,searchItem)
 Preconditions: the data must be read and put into the array for this funtion to be able to traverse. This function also needs user input
 Postconditions: there is no modification to the actual data or array, this function just prints the data
+
+
+method:    filterType
+Prototype: void Fashion::filterType(item *array, int, int)
+Description: This function takes in the array and the user's input of type, it then makes a new array with all the elements which fit that type, then gives
+user the option to filter by color or style which calls those functions (and makes another array with the items that have only the chosen criteria). The user
+can also choose to just print their current selection (the array with all the chosen filters applied)
+Calling: call this method like this:
+Fashion inventory 
+inventory.filterType(stock,stockSize, searchItemNumber)
+Preconditions: the data must be read and put into the array for this funtion to extract values from it and put into another array. This function also needs
+user input.
+Postconditions: the original array will remain unchanged but this function creates a temporary array as well 
+
+
