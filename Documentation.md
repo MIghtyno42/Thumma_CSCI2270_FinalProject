@@ -1,5 +1,14 @@
 Fashion Class Functions:
 
+Method: Fashion (constructor)
+Prototype: Fashion()
+Description: This function creates an instance of the object class. It gives access to the other public methods that are in this .cpp file
+Calling: Fashion inventory (where inventory is the instance name, can be called anything
+Preconditions: The data should be read when this is called, but it can be called anytime in the main function
+Postconditions: There is no change to the actual data or the array, this function just instantiates the class so that the other functions can be called through the instance.*/
+
+
+
 Method:   printInventory
 Prototype: void Fashion::printInventory(item *array, int)
 Description: This function takes in the array and prints out each part of the struct in the array which is the name, the style, the color, and style.
