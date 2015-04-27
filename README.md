@@ -6,8 +6,15 @@ This program works as an inventory for fashion companies and retail stores. What
 How to Run:
 
 Dependencies:
-String library
-
+string library (string)
+string.h
+iostream
+fstream
+g++ 11 (c++ 11 library)
+inventory file
+stdio.h
+stdlib.h
+cmath
 
 System Requirements:
 This program can be run on Windows, Mac, and Linux operating systems. 
