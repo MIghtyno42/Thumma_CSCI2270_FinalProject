@@ -9,11 +9,13 @@ matching items. The inventory will be built of arrays that can filter by color (
 (examples: shirt, dress, pants) or search by name. For example, one can search for a type of clothing - a dress, and then filter by category all of the 
 different choices from there. The user can choose the color, length, style and tailor the piece of clothing to what they want. If an exact match cannot be 
 found, then the program will return a myriad of designs that are similar to the one they were looking for. This program assumes that all sizes are present 
-and that the range of prices are already accounted for.
+and that the range of prices are already accounted for. Also, the user can add items to a virtual cart as they please to keep track of which itmes they want
  
 How to Run:
-The program will come up with a menu that lists these options: print the inventory, search by name, filter by type, filter by color, filter by style, sort
-the inventory in alphabetical order, add item to shopping cart, and quit the program. 
+To run the program you must type "g++ -std=c++11 main.cpp Fashion.cpp" and then enter.
+Then type "./a.out Inventory.txt"
+The program will come up with a menu that lists these options: print the inventory, search by name, filter by type, filter by color, filter by style, sort the inventory in alphabetical order, add item to shopping cart, and quit the program. 
+
 
 Dependencies:
 string library (string)
