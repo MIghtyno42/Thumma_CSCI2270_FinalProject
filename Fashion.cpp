@@ -33,9 +33,11 @@ Fashion::~Fashion(){
 
 }
 
-/*1. Prototype: void printInventory(item *array, int)
+/*1. Prototype: void Fashion::printInventory(item *array, int)
  *2. Description: This function takes in the array and prints out each part of the struct in the array which is the name, the style, the color, and style.
- *3. Calling: call this method like this: inventory.printInventory(stock,stockSize)
+ *3. Calling: call this method like this: 
+ *   Fashion inventory
+ * 	 inventory.printInventory(stock,stockSize)
  *4. Preconditions: the data must be read and put into the array for this function to print it
  *   Postconditions: there is no change to the actual data or array, this function merely prints the data*/
 void Fashion::printInventory(item *foundItems, int sizeStock)
@@ -49,10 +51,12 @@ void Fashion::printInventory(item *foundItems, int sizeStock)
 	}
 }
 
-/*1. Prototype: searchName(item *array, int, int)
+/*1. Prototype: Fashion::searchName(item *array, int, int)
  *2. Description: This function takes in the array and what the name of item the user is searching for in the array
  *   and traverses, finds, and prints out each part of the struct in the array (name, the style, the color, and style). So it searches the array by ".nameBarCode"
- *3. Calling: call this method like this: inventory.searchName(stock,stockSize,searchItem)
+ *3. Calling: call this method like this: 
+ *   Fashion inventory
+ *   inventory.searchName(stock,stockSize,searchItem)
  *4. Preconditions: the data must be read and put into the array for this funtion to be able to traverse. This function also needs user input
  *   Postconditions: there is no modification to the actual data or array, this function just prints the data*/
 void Fashion::searchName(item *searchItems, int sizeStock, int searchName){
@@ -72,11 +76,13 @@ void Fashion::searchName(item *searchItems, int sizeStock, int searchName){
 	}
 }
 
-/*1. Prototype: void filterType(item *array, int, int)
+/*1. Prototype: void Fashion::filterType(item *array, int, int)
  *2. Description: This function takes in the array and the user's input of type, it then makes a new array with all the elements which fit that type, then gives
  *   user the option to filter by color or style which calls those functions (and makes another array with the items that have only the chosen criteria). The user
  *   can also choose to just print their current selection (the array with all the chosen filters applied)
- *3. Calling: call this method like this: inventory.filterType(stock,stockSize, searchItemNumber)
+ *3. Calling: call this method like this:
+ *   Fashion inventory 
+ *   inventory.filterType(stock,stockSize, searchItemNumber)
  *4. Preconditions: the data must be read and put into the array for this funtion to extract values from it and put into another array. This function also needs
  *   user input.
  *   Postconditions: the original array will remain unchanged but this function creates a temporary array as well */
@@ -168,11 +174,13 @@ void Fashion::filterType(item *searchItems, int sizeStock, int filterType){
 	}
 }
 
-/*1. Prototype: void filterStyle(item *array, int, int)
+/*1. Prototype: void Fashion::filterStyle(item *array, int, int)
  *2. Description: Similar to filterType. This function takes in the array and the user's input of style, it then makes a new array with all the elements which fit that
  *   style, then gives user the option to filter by color or type which calls those functions (and makes another array with the items that have only the chosen criteria).
  *   The user can also choose to just print their current selection (the new array with all the chosen filters applied)
- *3. Calling: call this method like this: inventory.filterStyle(stock,stockSize, searchItemNumber)
+ *3. Calling: call this method like this: 
+ *   Fashion inventory
+ *   inventory.filterStyle(stock,stockSize, searchItemNumber)
  *4. Preconditions: the data must be read and put into the array for this funtion to extract values from it and put into another array. This function also needs
  *   user input.
  *   Postconditions: the original array will remain unchanged but this function creates a temporary array as well */
@@ -265,11 +273,13 @@ void Fashion::filterStyle(item *searchItems, int sizeStock, int filterStyle){
 	}
 }
 
-/*1. Prototype: void filterColor(item *array, int, int)
+/*1. Prototype: void Fashion::filterColor(item *array, int, int)
  *2. Description: Similar to filterStyle and filterType. This function takes in the array and the user's input of color, it then makes a new array with all the elements
  *   which fit that color, then gives user the option to filter by style or type which calls those functions (and makes another array with the items that have only the
  *   chosen criteria). The user can also choose to just print their current selection (the new array with all the chosen filters applied)
- *3. Calling: call this method like this: inventory.filterColor(stock,stockSize, searchItemNumber)
+ *3. Calling: call this method like this: 
+ *   Fashion inventory
+ *   inventory.filterColor(stock,stockSize, searchItemNumber)
  *4. Preconditions: the data must be read and put into the array for this funtion to extract values from it and put into another array. This function also needs
  *   user input.
  *   Postconditions: the original array will remain unchanged but this function creates a temporary array as well */
@@ -360,7 +370,7 @@ void Fashion::filterColor(item *searchItems, int sizeStock, int filterColor){
         }
 	}
 }
-/*1. Prototype: void setPrint(item *arr, int size)
+/*1. Prototype: void Fashion::setPrint(item *arr, int size)
  *2. Description: This function takes in the array and the size, and prints the items in that array. This is used
  *   specifically for after filtering by type, style, or color occurs. It checks if there are still items that match
  *   the filter criteria, and if there are, it prints all the items that match that filtered criteria.
@@ -382,7 +392,7 @@ void Fashion::setPrint(item *filterItems, int filterItemsSize){
     }
 }
 
-/*1. Prototype: int barCode(string)
+/*1. Prototype: int Fashion::barCode(string)
  *2. Description: This function takes in a string, finds the number values for each letter, adds them up, then returns that sum to give us an interger value for a
  *   certain string. This int is returned.
  *3. Calling: call this method like this: inventory.barCode(searchItem)
@@ -396,10 +406,12 @@ int Fashion::barCode(string word){
     return sum;
 }
 
-/*1. Prototype: array quickSort(item* array, int, int)
+/*1. Prototype: array Fashion::quickSort(item* array, int, int)
  *2. Description: This function sorts the inventory in alphabetical order. It takes in the array, the first and the
  *   last indices as arguments and sorts the string by using the sorting method quickSort.
- *3. Calling: call this method like this: inventory.quickSort(stock, left, right)
+ *3. Calling: call this method like this: 
+ *   Fashion inventory
+ *   inventory.quickSort(stock, left, right)
  *4. Preconditions: the data must be read and put into the array for this function to traverse through and sort it
  *   Postconditions: the names of the items in the inventory are now in alphabetical order, and it will be returned
      in a new array that is created in the main function .*/
@@ -431,10 +443,12 @@ item *Fashion::quickSort(item *arr, int left, int right){
 
 }
 
-/*1. Prototype: void shoppingCart(item* array, int)
+/*1. Prototype: void Fashion::shoppingCart(item* array, int)
  *2. Description: This function has the user type in an item, finds the item, then makes its bool value to be true(thus putting it in a virtual "shopping cart".
  * 	 Then it prints out all the values in the array that have the bool value as true
- *3. Calling: call this method like this: inventory.shoppingCart(stock, stockSize)
+ *3. Calling: call this method like this: 
+ *   Fashion inventory
+ *   inventory.shoppingCart(stock, stockSize)
  *4. Preconditions: the data must be read and put into the array for this function to traverse through and sort it, this also requires user input data
  *   Postconditions:  After this function is run, the bool values for some items in the array will change, thus the origional array will change, this function also prints
  *   the true bool array elements */
