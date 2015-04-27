@@ -33,4 +33,15 @@ Preconditions: the data must be read and put into the array for this funtion to 
 user input.
 Postconditions: the original array will remain unchanged but this function creates a temporary array as well 
 
+method:    filterStyle
+Prototype: void Fashion::filterStyle(item *array, int, int)
+Description: Similar to filterType. This function takes in the array and the user's input of style, it then makes a new array with all the elements which fit that
+style, then gives user the option to filter by color or type which calls those functions (and makes another array with the items that have only the chosen criteria).
+The user can also choose to just print their current selection (the new array with all the chosen filters applied)
+Calling: call this method like this: 
+Fashion inventory
+inventory.filterStyle(stock,stockSize, searchItemNumber)
+Preconditions: the data must be read and put into the array for this funtion to extract values from it and put into another array. This function also needs user input.
+Postconditions: the original array will remain unchanged but this function creates a temporary array as well 
+
 
