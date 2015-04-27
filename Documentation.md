@@ -8,6 +8,14 @@ Preconditions: The data should be read when this is called, but it can be called
 Postconditions: There is no change to the actual data or the array, this function just instantiates the class so that the other functions can be called through the instance.*/
 
 
+Method: ~Fashion  (destructor)
+Prototype: ~Fashion()
+Description: This function is just the destructor
+Calling: ~Fashion();
+Preconditions: This is for when everything is done and the user's commands are all executed
+Postconditions: Destructs the instance created by the constructor */
+
+
 
 Method:   printInventory
 Prototype: void Fashion::printInventory(item *array, int)
