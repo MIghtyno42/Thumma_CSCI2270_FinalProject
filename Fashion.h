@@ -6,8 +6,8 @@
 #ifndef FASHION_H
 #define FASHION_H
 
-#include<string>
-#include<iostream>
+#include <string>
+#include <iostream>
 
 
 struct item{
