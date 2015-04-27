@@ -25,7 +25,11 @@ Fashion::Fashion(){
 
 }
 
-//destructor
+/* 1. Prototype: ~Fashion()
+   2. Description: This function is just the destructor
+   3. Calling: ~Fashion();
+   4. Preconditions: This is for when everything is done and the user's commands are all executed
+      Postconditions: Destructs the instance created by the constructor */
 Fashion::~Fashion(){
 
 }
