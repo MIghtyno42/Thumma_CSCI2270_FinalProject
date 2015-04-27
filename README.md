@@ -12,6 +12,8 @@ found, then the program will return a myriad of designs that are similar to the 
 and that the range of prices are already accounted for.
  
 How to Run:
+The program will come up with a menu that lists these options: print the inventory, search by name, filter by type, filter by color, filter by style, sort
+the inventory in alphabetical order, add item to shopping cart, and quit the program. 
 
 Dependencies:
 string library (string)
