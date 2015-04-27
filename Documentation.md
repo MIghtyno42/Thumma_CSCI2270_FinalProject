@@ -64,4 +64,11 @@ Calling: call this method like this: in the sub-menu, setPrint(arr, size);
 Preconditions: The array has to be filtered by type, color, or size already for this function to be called.
 Postconditions: Only the filtered array that matches the criteria will print. 
 
+method:    barCode
+Prototype: int Fashion::barCode(string)
+Description: This function takes in a string, finds the number values for each letter, adds them up, then returns that sum to give us an interger value for a
+certain string. This int is returned.
+Calling: call this method like this: inventory.barCode(searchItem)
+Preconditions: the only thing this function depends on is a string that the user provides
+Postconditions: there is no change to the data but there is now a number value for the string
 
