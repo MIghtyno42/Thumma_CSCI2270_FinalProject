@@ -15,7 +15,7 @@ How to Run:
 To run the program you must type "g++ -std=c++11 main.cpp Fashion.cpp" and then enter.
 Then type "./a.out Inventory.txt"
 The program will come up with a menu that lists these options: print the inventory, search by name, filter by type, filter by color, filter by style, sort the inventory in alphabetical order, add item to shopping cart, and quit the program. Once you pick an option follow the on screen instructions. To see specific names of items you can selcect "print inventory" or look on the Inventory.txt file.
-Documentation: Thumma_CSCI2270_FinalProject/Documentation.md
+[Documentation] (Thumma_CSCI2270_FinalProject/Documentation.md)
 
 
 
