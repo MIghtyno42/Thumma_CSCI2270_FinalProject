@@ -18,4 +18,4 @@ Calling: call this method like this:
 Fashion inventory
 inventory.searchName(stock,stockSize,searchItem)
 Preconditions: the data must be read and put into the array for this funtion to be able to traverse. This function also needs user input
-Postconditions: there is no modification to the actual data or array, this function just prints the data*/
+Postconditions: there is no modification to the actual data or array, this function just prints the data
