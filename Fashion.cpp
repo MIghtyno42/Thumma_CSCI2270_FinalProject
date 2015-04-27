@@ -360,13 +360,13 @@ void Fashion::filterColor(item *searchItems, int sizeStock, int filterColor){
         }
 	}
 }
-/* 1. Prototype: void setPrint(item *arr, int size)
-   2. Description: This function takes in the array and the size, and prints the items in that array. This is used
-      specifically for after filtering by type, style, or color occurs. It checks if there are still items that match
-      the filter criteria, and if there are, it prints all the items that match that filtered criteria.
-   3. Calling: call this method like this: in the sub-menu, setPrint(arr, size);
-   4. Preconditions: The array has to be filtered by type, color, or size already for this function to be called.
-      Postconditions: Only the filtered array that matches the criteria will print. */
+/*1. Prototype: void setPrint(item *arr, int size)
+ *2. Description: This function takes in the array and the size, and prints the items in that array. This is used
+ *   specifically for after filtering by type, style, or color occurs. It checks if there are still items that match
+ *   the filter criteria, and if there are, it prints all the items that match that filtered criteria.
+ *3. Calling: call this method like this: in the sub-menu, setPrint(arr, size);
+ *4. Preconditions: The array has to be filtered by type, color, or size already for this function to be called.
+     Postconditions: Only the filtered array that matches the criteria will print. */
 void Fashion::setPrint(item *filterItems, int filterItemsSize){
     if(filterItemsSize == 0){
         cout<<"There are no items that match the criteria"<<endl;
