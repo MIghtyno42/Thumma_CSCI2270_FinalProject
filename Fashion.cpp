@@ -73,42 +73,6 @@ void Fashion::searchName(item *searchItems, int sizeStock, int searchName){
 	}
 }
 
-//searching for an item color
-void Fashion::searchColor(item *searchItems, int sizeStock, int searchColor){
-    for(int i = 0; i < sizeStock; i++){
-        if(searchItems[i].colorBarCode == searchColor){
-            cout<<"Name:"<<searchItems[i].name<<endl;
-			cout<<"Type:" <<searchItems[i].type<<endl;
-			cout<<"Color:" <<searchItems[i].color<<endl;
-			cout<<"Style:" <<searchItems[i].style<<endl;
-        }
-    }
-}
-
-//searching for an item type
-void Fashion::searchType(item *searchItems, int sizeStock, int searchType){
-    for(int i = 0; i < sizeStock; i++){
-        if(searchItems[i].typeBarCode == searchType){
-            cout<<"Name:"<<searchItems[i].name<<endl;
-			cout<<"Type:" <<searchItems[i].type<<endl;
-			cout<<"Color:" <<searchItems[i].color<<endl;
-			cout<<"Style:" <<searchItems[i].style<<endl;
-        }
-    }
-}
-
-//searching for an item style
-void Fashion::searchStyle(item *searchItems, int sizeStock, int searchStyle){
-    for(int i = 0; i < sizeStock; i++){
-        if(searchItems[i].styleBarCode == searchStyle){
-            cout<<"Name:"<<searchItems[i].name<<endl;
-			cout<<"Type:" <<searchItems[i].type<<endl;
-			cout<<"Color:" <<searchItems[i].color<<endl;
-			cout<<"Style:" <<searchItems[i].style<<endl;
-        }
-    }
-}
-
 /*1. Prototype: void filterType(item *array, int, int)
  *2. Description: This function takes in the array and the user's input of type, it then makes a new array with all the elements which fit that type, then gives
  *   user the option to filter by color or style which calls those functions (and makes another array with the items that have only the chosen criteria). The user
