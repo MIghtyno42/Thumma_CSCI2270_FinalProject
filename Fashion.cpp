@@ -16,10 +16,10 @@ using namespace std;
 /*1. Prototype: Fashion()
  *2. Description: This function creates an instance of the object class. It gives access to the other public methods
  *   that are in this .cpp file
- *3. Calling: Fashion inventory (where inventory is the instance name, can be called anything
+ *3. Calling: Fashion inventory (where inventory is the instance name, can be called anything)
  *4. Preconditions: The data should be read when this is called, but it can be called anytime in the main function
-      Postconditions: There is no change to the actual data or the array, this function just instantiates the class
-      so that the other functions can be called through the instance.*/
+     Postconditions: There is no change to the actual data or the array, this function just instantiates the class
+     so that the other functions can be called through the instance.*/
 Fashion::Fashion(){
 
 }
@@ -28,14 +28,14 @@ Fashion::Fashion(){
  *2. Description: This function is just the destructor
  *3. Calling: ~Fashion();
  *4. Preconditions: This is for when everything is done and the user's commands are all executed
-      Postconditions: Destructs the instance created by the constructor */
+     Postconditions: Destructs the instance created by the constructor */
 Fashion::~Fashion(){
 
 }
 
 /*1. Prototype: void Fashion::printInventory(item *array, int)
  *2. Description: This function takes in the array and prints out each part of the struct in the array which is the name, the style, the color, and style.
- *3. Calling: call this method like this: 
+ *3. Calling: call this method like this:
  *   Fashion inventory
  * 	 inventory.printInventory(stock,stockSize)
  *4. Preconditions: the data must be read and put into the array for this function to print it
@@ -54,7 +54,7 @@ void Fashion::printInventory(item *foundItems, int sizeStock)
 /*1. Prototype: Fashion::searchName(item *array, int, int)
  *2. Description: This function takes in the array and what the name of item the user is searching for in the array
  *   and traverses, finds, and prints out each part of the struct in the array (name, the style, the color, and style). So it searches the array by ".nameBarCode"
- *3. Calling: call this method like this: 
+ *3. Calling: call this method like this:
  *   Fashion inventory
  *   inventory.searchName(stock,stockSize,searchItem)
  *4. Preconditions: the data must be read and put into the array for this funtion to be able to traverse. This function also needs user input
@@ -81,7 +81,7 @@ void Fashion::searchName(item *searchItems, int sizeStock, int searchName){
  *   user the option to filter by color or style which calls those functions (and makes another array with the items that have only the chosen criteria). The user
  *   can also choose to just print their current selection (the array with all the chosen filters applied)
  *3. Calling: call this method like this:
- *   Fashion inventory 
+ *   Fashion inventory
  *   inventory.filterType(stock,stockSize, searchItemNumber)
  *4. Preconditions: the data must be read and put into the array for this funtion to extract values from it and put into another array. This function also needs
  *   user input.
@@ -178,7 +178,7 @@ void Fashion::filterType(item *searchItems, int sizeStock, int filterType){
  *2. Description: Similar to filterType. This function takes in the array and the user's input of style, it then makes a new array with all the elements which fit that
  *   style, then gives user the option to filter by color or type which calls those functions (and makes another array with the items that have only the chosen criteria).
  *   The user can also choose to just print their current selection (the new array with all the chosen filters applied)
- *3. Calling: call this method like this: 
+ *3. Calling: call this method like this:
  *   Fashion inventory
  *   inventory.filterStyle(stock,stockSize, searchItemNumber)
  *4. Preconditions: the data must be read and put into the array for this funtion to extract values from it and put into another array. This function also needs
@@ -277,7 +277,7 @@ void Fashion::filterStyle(item *searchItems, int sizeStock, int filterStyle){
  *2. Description: Similar to filterStyle and filterType. This function takes in the array and the user's input of color, it then makes a new array with all the elements
  *   which fit that color, then gives user the option to filter by style or type which calls those functions (and makes another array with the items that have only the
  *   chosen criteria). The user can also choose to just print their current selection (the new array with all the chosen filters applied)
- *3. Calling: call this method like this: 
+ *3. Calling: call this method like this:
  *   Fashion inventory
  *   inventory.filterColor(stock,stockSize, searchItemNumber)
  *4. Preconditions: the data must be read and put into the array for this funtion to extract values from it and put into another array. This function also needs
@@ -409,7 +409,7 @@ int Fashion::barCode(string word){
 /*1. Prototype: array Fashion::quickSort(item* array, int, int)
  *2. Description: This function sorts the inventory in alphabetical order. It takes in the array, the first and the
  *   last indices as arguments and sorts the string by using the sorting method quickSort.
- *3. Calling: call this method like this: 
+ *3. Calling: call this method like this:
  *   Fashion inventory
  *   inventory.quickSort(stock, left, right)
  *4. Preconditions: the data must be read and put into the array for this function to traverse through and sort it
@@ -446,7 +446,7 @@ item *Fashion::quickSort(item *arr, int left, int right){
 /*1. Prototype: void Fashion::shoppingCart(item* array, int)
  *2. Description: This function has the user type in an item, finds the item, then makes its bool value to be true(thus putting it in a virtual "shopping cart".
  * 	 Then it prints out all the values in the array that have the bool value as true
- *3. Calling: call this method like this: 
+ *3. Calling: call this method like this:
  *   Fashion inventory
  *   inventory.shoppingCart(stock, stockSize)
  *4. Preconditions: the data must be read and put into the array for this function to traverse through and sort it, this also requires user input data
