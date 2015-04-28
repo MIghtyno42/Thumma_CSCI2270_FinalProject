@@ -509,6 +509,4 @@ void Fashion::shoppingCart(item *shoppingItems, int sizeStock){
                 break;
             }
         }
-
-
 }
