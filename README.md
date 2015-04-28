@@ -19,7 +19,6 @@ The program will come up with a menu that lists these options: print the invento
 [Documentation] (Documentation.md)
 
 
-
 Dependencies:
 string library (string),
 string.h,
