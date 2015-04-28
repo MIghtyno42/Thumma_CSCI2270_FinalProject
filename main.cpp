@@ -77,13 +77,11 @@ int main(int argc, char *argv[]){
 	int command;
 	//creating an instance of class, fashion inventory
 	Fashion inventory;
-
 	//initializing more variables used in loop
     string searchItem;
     int searchItemNumber;
     int start = 0;
     item *new_arr = new item [stockSize];
-
 	//while loop to use for menu
     while(command != 8){
         cout<<"======Main Menu======"<<endl;
@@ -95,7 +93,7 @@ int main(int argc, char *argv[]){
         cout<<"6. Sort Inventory Alphabetically"<<endl;
         cout<<"7. Add Item to Shopping Cart" << endl;
         cout<<"8. Quit "<<endl;
-
+        //taking in the user's input
         cin >> command;
         cin.ignore(10000,'\n');
 
