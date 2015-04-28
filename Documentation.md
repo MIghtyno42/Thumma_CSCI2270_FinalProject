@@ -16,7 +16,7 @@ Preconditions: This is for when everything is done and the user's commands are a
 Postconditions: Destructs the instance created by the constructor */
 
 
-Method:   printInventory
+Method: printInventory
 Prototype: void Fashion::printInventory(item *array, int)
 Description: This function takes in the array and prints out each part of the struct in the array which is the name, the style, the color, and style.
 Calling: call this method like this: 
@@ -52,7 +52,7 @@ Expected output example:
 			Style: boho
 
 
-Method:      searchName
+Method: searchName
 Prototype: Fashion::searchName(item *array, int, int)
 Description: This function takes in the array and what the name of item the user is searching for in the array
 and traverses, finds, and prints out each part of the struct in the array (name, the style, the color, and style). So it searches the array by ".nameBarCode"
@@ -71,7 +71,7 @@ Expected output example:
 			Style: boho
 
 
-method:    filterType
+method: filterType
 Prototype: void Fashion::filterType(item *array, int, int)
 Description: This function takes in the array and the user's input of type, it then makes a new array with all the elements which fit that type, then gives
 user the option to filter by color or style which calls those functions (and makes another array with the items that have only the chosen criteria). The user
@@ -97,7 +97,7 @@ Expected output example:
 			4. Go back?
 
 
-method:    filterStyle
+method: filterStyle
 Prototype: void Fashion::filterStyle(item *array, int, int)
 Description: Similar to filterType. This function takes in the array and the user's input of style, it then makes a new array with all the elements which fit that
 style, then gives user the option to filter by color or type which calls those functions (and makes another array with the items that have only the chosen criteria).
@@ -122,7 +122,7 @@ Expected output example:
 			4. Go back?
 
 
-method:     filterColor
+method: filterColor
 Prototype: void Fashion::filterColor(item *array, int, int)
 Description: Similar to filterStyle and filterType. This function takes in the array and the user's input of color, it then makes a new array with all the elements
 which fit that color, then gives user the option to filter by style or type which calls those functions (and makes another array with the items that have only the
@@ -147,7 +147,7 @@ Expected output example:
 			4. Go back?
 			
 
-method:     setPrint
+method: setPrint
 Prototype: void Fashion::setPrint(item *arr, int size)
 Description: This function takes in the array and the size, and prints the items in that array. This is used
 specifically for after filtering by type, style, or color occurs. It checks if there are still items that match
@@ -171,7 +171,7 @@ Expected output example:
 			Style: retro
 
 
-method:    barCode
+method: barCode
 Prototype: int Fashion::barCode(string)
 Description: This function takes in a string, finds the number values for each letter, adds them up, then returns that sum to give us an interger value for a
 certain string. This int is returned.
@@ -182,7 +182,7 @@ Expected input: string
 Expected output: returns integer value, nothing print
 
 
-method:   quickSort
+method: quickSort
 Prototype: array Fashion::quickSort(item* array, int, int)
 Description: This function sorts the inventory in alphabetical order. It takes in the array, the first and the
 last indices as arguments and sorts the string by using the sorting method quickSort.
@@ -204,7 +204,7 @@ Name -- Embroidered Espadrilles
 Name -- Floral Drop Waist Skirt
 
 
-method:     shoppingCart
+method: shoppingCart
 Prototype: void Fashion::shoppingCart(item* array, int)
 Description: This function has the user type in an item, finds the item, then makes its bool value to be true(thus putting it in a virtual "shopping cart".
 Then it prints out all the values in the array that have the bool value as true
