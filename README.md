@@ -22,6 +22,7 @@ The program will come up with a menu that lists these options: print the invento
 
 
 DEPENDENCIES:
+
 string library (string),
 string.h,
 iostream,
@@ -33,16 +34,20 @@ stdlib.h,
 cmath
 
 SYSTEM REQUIREMENTS:
+
 This program can be run on Windows, Mac, and Linux operating systems. 
 
 GROUP MEMBERS:
+
 Christine Samson
 Deekshitha Thumma
 
 CONTRIBUTORS:
+
 N/A
 
 OPEN ISSUES/BUGS:
+
 1.) Need a faster way to exit each of the sub-menus and return to the main program. What the program is doing now: it enters the main menu, and then a 
     sub-menu, and then another sub-menu. To exit, the user needs to say go back on each of the sub-menus in order to return to the main menu. Example: Main Menu -> filter by type sub-
     menu -> filter by color sub-menu -> filter by style sub-menu and then to return to the main menu in order to exit the program, the user needs to click 
