@@ -41,6 +41,7 @@ class Fashion
         int barCode(std::string word);
         item *quickSort(item *arr, int left, int right);
         void shoppingCart(item *shoppingItems, int sizeStock);
+        void deleteCart(item *shoppingItems);
     protected:
     private:
         item *stock;
