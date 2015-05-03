@@ -510,3 +510,7 @@ void Fashion::shoppingCart(item *shoppingItems, int sizeStock){
             }
         }
 }
+
+void Fashion::deleteCart(item *shoppingItems){
+	delete[] shoppingItems;
+}
